@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _apiKey: 9E0n0mhoC9SWvbbA4ywu1M1VJLgockkNGD5SXPJYHstlRkijO15X7u7wFGCCjstFplycNn
   _useLightshipDepth: 1
-  _preferLidarIfAvailable: 1
+  _preferLidarIfAvailable: 0
   _useLightshipMeshing: 1
   _useLightshipSemanticSegmentation: 1
   _useLightshipScanning: 1
