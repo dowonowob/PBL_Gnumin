@@ -486,10 +486,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetFrameRate: 60
-  _occlusionTechnique: 0
+  _occlusionTechnique: 1
   _optimalOcclusionDistanceMode: 1
   _principalOccludee: {fileID: 567782885}
-  _requestedSuppressionChannels: []
+  _requestedSuppressionChannels:
+  - sky
+  - ground
   _useCustomMaterial: 0
   _customMaterial: {fileID: 0}
   _requestBypassOcclusionManagerUpdates: 1
@@ -497,7 +499,7 @@ MonoBehaviour:
   _meshManager: {fileID: 1958411676}
   _requestPreferSmoothEdges: 1
   _requestOcclusionStabilizationEnabled: 1
-  _requestOcclusionSuppressionEnabled: 0
+  _requestOcclusionSuppressionEnabled: 1
 --- !u!114 &81771860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +707,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 708977613}
     m_Modifications:
+    - target: {fileID: 1551983196733417717, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5593195909017195379, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.01
