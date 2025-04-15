@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a1c0a2e31ceee428e68ea6aba2ed7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
+  cameraManager: {fileID: 81771855}
   sharedMaterial: {fileID: 0}
 --- !u!1 &202786895
 GameObject:
@@ -598,6 +598,8 @@ MonoBehaviour:
   walkingSpeed: 3
   jumpDistance: 1
   jumpPenalty: 2
+  tolerance: 0.3
+  idealDistance: 1.5
   pathFindingBehaviour: 2
 --- !u!1 &356662974
 GameObject:
@@ -1566,12 +1568,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b456713bd4d4c31b3cb04c67d82381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetFrameRate: 20
+  _targetFrameRate: 60
   _fuseKeyframesOnly: 0
-  _maximumIntegrationDistance: 40
-  _voxelSize: 0.05
+  _maximumIntegrationDistance: 20
+  _voxelSize: 0.3
   _enableDistanceBasedVolumetricCleanup: 1
-  _meshBlockSize: 1.4
+  _meshBlockSize: 10
   _meshCullingDistance: 40
   _enableMeshDecimation: 1
   _isMeshFilteringEnabled: 1
