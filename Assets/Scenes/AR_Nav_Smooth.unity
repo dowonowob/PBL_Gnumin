@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _agent: {fileID: 565528749}
-  _material: {fileID: 2100000, guid: 13c0b40a4ef24344d9e9e0792e8e9428, type: 2}
+  _material: {fileID: 0}
 --- !u!4 &2217127
 Transform:
   m_ObjectHideFlags: 0
@@ -360,13 +360,13 @@ MonoBehaviour:
   _tileSize: 0.07
   _flatFloorTolerance: 0.3
   _maxSlope: 40
-  _stepHeight: 0.2
+  _stepHeight: 0.3
   _scanInterval: 0.3
-  _scanRange: 1.5
+  _scanRange: 2
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
-  _visualise: 1
+  _visualise: 0
 --- !u!4 &485364039
 Transform:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ PrefabInstance:
       addedObject: {fileID: 565528751}
     - targetCorrespondingSourceObject: {fileID: 5593195909017292627, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 565528759}
+      addedObject: {fileID: 565528761}
   m_SourcePrefab: {fileID: 100100000, guid: 4be7a99d429a19840a38df28f88a8680, type: 3}
 --- !u!1 &565528748 stripped
 GameObject:
@@ -893,7 +893,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &565528759
+--- !u!114 &565528761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -902,13 +902,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 565528748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c86c0ec366a8a4894e8155f8bb2204, type: 3}
+  m_Script: {fileID: 11500000, guid: 92a60cac66f71d5478b259681c42039e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetAgent: {fileID: 0}
-  linearMoveSpeed: 4
-  linearRotationSpeed: 5
-  waypointReachThreshold: 0.2
+  agent: {fileID: 565528749}
+  smoothIterations: 2
+  moveSpeed: 4
+  turnSpeed: 5
+  reachThreshold: 0.1
 --- !u!1 &684248769
 GameObject:
   m_ObjectHideFlags: 0

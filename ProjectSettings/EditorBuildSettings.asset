@@ -5,21 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR_Character.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 744f6baf894ca55418096fd3ef7f8811
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR_Occlusion.unity
     guid: 0ed49430474f5f741aa4fa029a76b8cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AR_C_O.unity
     guid: 8ff1f9f4ec178424aacb033fbbf24519
   - enabled: 1
     path: Assets/Scenes/AR_Nav.unity
     guid: b5b990322ba29d0478054a6adba8c2ac
+  - enabled: 1
+    path: Assets/Scenes/AR_Nav_Smooth.unity
+    guid: 08c99757dfa55294a876b29ad424cab4
+  - enabled: 0
+    path: Assets/Scenes/AR_ObjectInteraction.unity
+    guid: a1d17e856bc7c504a96f5e78da41d56e
+  - enabled: 1
+    path: Assets/Scenes/AR_Semantic.unity
+    guid: 29f0ee76134036d4e85cedb709d97c02
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 9b368e862fc1aa749b140ae3a41b6254, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7736aef75f4a38a4bacffebb1d594ed1, type: 2}

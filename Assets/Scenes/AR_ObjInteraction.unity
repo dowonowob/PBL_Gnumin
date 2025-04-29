@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2217127}
   - component: {fileID: 2217125}
+  - component: {fileID: 2217128}
   m_Layer: 0
   m_Name: NavCharacter
   m_TagString: Untagged
@@ -168,6 +169,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2217128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428eb62726fd471a8ae41b9d299b2c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetFrameRate: 20
 --- !u!1 &135143607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,8 +1476,10 @@ MonoBehaviour:
   _isFilteringAllowListEnabled: 1
   _allowList:
   - ground
-  _isFilteringBlockListEnabled: 0
-  _blockList: []
+  - loungeable_experimental
+  _isFilteringBlockListEnabled: 1
+  _blockList:
+  - sky
   _enableLevelsOfDetail: 0
   _levelsOfDetail: 1
 --- !u!114 &1342151583
