@@ -6,7 +6,7 @@ using Niantic.Lightship.AR.NavigationMesh;
 public class SmoothNavMeshFollower : MonoBehaviour
 {
     [Header("References")]
-    public LightshipNavMeshAgent targetAgent;
+    public NavMeshAgent_Custom targetAgent;
 
     [Header("Movement Settings")]
     public float linearMoveSpeed = 4.0f;

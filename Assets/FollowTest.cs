@@ -7,7 +7,7 @@ namespace Niantic.Lightship.AR.NavigationMesh
 {
     public class FollowDeviceViaNavMesh : MonoBehaviour
     {
-        private LightshipNavMeshAgent agent;
+        private NavMeshAgent_Custom agent;
         private Camera cam;
 
         private Vector3 lastTargetPosition;
@@ -17,7 +17,7 @@ namespace Niantic.Lightship.AR.NavigationMesh
 
         private void Start()
         {
-            agent = GetComponent<LightshipNavMeshAgent>();
+            agent = GetComponent<NavMeshAgent_Custom>();
             cam = Camera.main;
             lastTargetPosition = cam.transform.position;
         }
@@ -31,7 +31,7 @@ namespace Niantic.Lightship.AR.NavigationMesh
                 Vector3 currentTargetPos = cam.transform.position;
                 float distanceMoved = Vector3.Distance(currentTargetPos, lastTargetPosition);
 
-                if (distanceMoved > moveThreshold && agent.State == LightshipNavMeshAgent.AgentNavigationState.Idle)
+                if (distanceMoved > moveThreshold && agent.State == NavMeshAgent_Custom.AgentNavigationState.Idle)
                 {
                     agent.SetDestination(currentTargetPos);
                     lastTargetPosition = currentTargetPos;

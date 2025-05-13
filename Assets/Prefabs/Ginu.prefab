@@ -97,9 +97,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5f83ee7fabeffa479c9d06fe0e2b537, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4511002579330238425}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5f83ee7fabeffa479c9d06fe0e2b537, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1465066873499253505}
   m_SourcePrefab: {fileID: 100100000, guid: a5f83ee7fabeffa479c9d06fe0e2b537, type: 3}
 --- !u!1 &7856741201352669780 stripped
 GameObject:
@@ -238,23 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c86c0ec366a8a4894e8155f8bb2204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetAgent: {fileID: 1465066873499253505}
+  targetAgent: {fileID: 0}
   linearMoveSpeed: 4
   linearRotationSpeed: 5
   waypointReachThreshold: 0.2
---- !u!114 &1465066873499253505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7856741201352669780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9c6c34ba7214d98a185db26b656d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkingSpeed: 5
-  jumpDistance: 0
-  jumpPenalty: 1
-  pathFindingBehaviour: 2

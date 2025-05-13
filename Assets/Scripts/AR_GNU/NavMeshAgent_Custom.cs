@@ -8,110 +8,92 @@ using UnityEngine;
 
 namespace Niantic.Lightship.AR.NavigationMesh
 {
-    /// <summary>
-    /// LightshipNavMeshAgent is an example agent implementation that navigates a LightshipNavMesh based on logic programmed here.
-    /// You place this MonoBehaviour on a GameObject to have that GameObject navigate autonomously through your real environment.
-    /// You can create new versions of this to change how your creatures navigate the LightshipNavMesh.
-    /// For example you may want to use physics/forces or add splines rather than straight lines.
-    /// This is a basic example that uses linear interpolation and coroutines.
-    /// </summary>
     [PublicAPI("apiref/Niantic/Lightship/AR/NavigationMesh/LightshipNavMeshAgent/")]
-    public class LightshipNavMeshAgent : MonoBehaviour
+    public class NavMeshAgent_Custom : LightshipNavMeshAgent
     {
-        [Header("Agent Settings")]
-
-        [Tooltip("The speed at which the agent will walk, in waypoints/second.")]
-        [SerializeField]
-        private float walkingSpeed = 3.0f;
-
-        [Tooltip("The maximum distance an agent can jump in meters.")]
-        [SerializeField]
-        private float jumpDistance = 1;
-
-        [Tooltip("Determines the cost of jumping. This is an added cost for steps taken 'off-surface'.\n\n" +
-            "Being off-surface includes steps taken at the jumping off point and steps taken mid-jump. " +
-            "If there is a 1 cell block between the start and the destination,assuming going around takes " +
-            "~3 points, then jumping over with nopenalty will cost 2 points, jumping over with 1 penalty will " +
-            "cost 3 points, and so on... If there is a gap between the two surfaces, the cost of jumping will " +
-            "aggregate with each step until the agent lands on a surface.")]
-        [SerializeField]
-        private int jumpPenalty = 2;
-
-        [Tooltip("Determines how the agent should behave when its destination is on a foreign surface.\n\n" +
-            "Single Surface: The calculated route will navigate to the destination " +
-            "or the closest point to it within a single surface.\n\n" +
-            "Inter Surface Prefer Performance: The calculated route can contain jumps to other surfaces. " +
-            "The agent will only consider immediate nodes during the search. " +
-            "This method is faster, but does not always find an existing path.\n\n" +
-            "Inter Surface Prefer Results: The calculated route can contain jumps to other surfaces. " +
-            "This method is slower, but it finds a path if it exists.")]
-        [SerializeField]
-        private PathFindingBehaviour pathFindingBehaviour = PathFindingBehaviour.InterSurfacePreferResults;
+        [Header("Custom Agent Settings")]
+        [SerializeField] private float _customWalkingSpeed = 3.0f;
+        [SerializeField] private float _customJumpDistance = 1;
+        [SerializeField] private int _customJumpPenalty = 2;
+        [SerializeField] private PathFindingBehaviour _customPathFinding = PathFindingBehaviour.InterSurfacePreferResults;
+        [SerializeField] private float _standToIdleDelay = 3.0f;
 
         private CharacterAnimationController _animController;
-
-        public enum AgentNavigationState
-        {
-            Paused,
-            Idle,
-            HasPath
-        }
-
-        public AgentNavigationState State { get; set; } = AgentNavigationState.Idle;
-        private Path _path = new Path(null, Path.Status.PathInvalid);
-        public Path path
-        {
-            get => _path;
-        }
-        private Vector3 _destination;
-
+        private AgentConfiguration _agentConfig;
         private Coroutine _actorMoveCoroutine;
         private Coroutine _actorJumpCoroutine;
-
-        private AgentConfiguration _agentConfig;
-        private LightshipNavMeshManager _lightshipNavMeshManager;
         private LightshipNavMesh _lightshipNavMesh;
 
-        private Vector3 _dir = new Vector3(0, 0, 0);
+        private Path _path = new Path(null, Path.Status.PathInvalid);
+        public new Path path => _path;
 
-        private void Start()
-        {
-            _agentConfig = new AgentConfiguration(jumpPenalty, jumpDistance, pathFindingBehaviour);
+        public enum CustomAgentNavigationState { Paused, Idle, HasPath }
+        public CustomAgentNavigationState CustomAgentState { get; set; } = CustomAgentNavigationState.Idle;
 
-            //find the LightshipNavMesh manager and connect it.
-            _lightshipNavMeshManager = GameObject.FindObjectOfType<LightshipNavMeshManager>();
-
-            //fail if missing
-            if (_lightshipNavMeshManager == null)
-                throw new ArgumentException("You need to add a LightshipNavMeshManager to the scene");
-
-            _lightshipNavMesh = _lightshipNavMeshManager.LightshipNavMesh;
-
-            _animController.SetStand(true);
-        }
+        private float _standTimer = 0f;
+        private bool _isStanding = false;
+        private bool _isIdlePlaying = false;
 
         private void Awake()
         {
             _animController = GetComponent<CharacterAnimationController>();
         }
 
+        private void Start()
+        {
+            _agentConfig = new AgentConfiguration(_customJumpPenalty, _customJumpDistance, _customPathFinding);
+
+            var navManager = GameObject.FindObjectOfType<LightshipNavMeshManager>();
+            if (navManager == null)
+                throw new ArgumentException("You need to add a LightshipNavMeshManager to the scene");
+
+            _lightshipNavMesh = navManager.LightshipNavMesh;
+            _animController.SetStand(true);
+            _isStanding = true;
+            _standTimer = 0f;
+        }
+
         private void Update()
         {
-            switch (State)
+            switch (CustomAgentState)
             {
-                case AgentNavigationState.Paused:
+                case CustomAgentNavigationState.Paused:
                     break;
 
-                case AgentNavigationState.Idle:
+                case CustomAgentNavigationState.Idle:
                     StayOnNavMesh();
                     break;
 
-                case AgentNavigationState.HasPath:
+                case CustomAgentNavigationState.HasPath:
+                    _animController.SetWalking(true);
                     break;
+            }
+
+            if (_isStanding && !_isIdlePlaying)
+            {
+                _standTimer += Time.deltaTime;
+
+                if (_standTimer >= _standToIdleDelay)
+                {
+                    _animController.SetStand(false);
+                    _animController.SetIdle(true);
+                    _isIdlePlaying = true;
+                    _isStanding = false;
+                    _standTimer = 0f;
+                }
+            }
+
+            if (_isIdlePlaying && !_animController.IsIdlePlaying())
+            {
+                _animController.SetIdle(false);
+                _animController.SetStand(true);
+                _isIdlePlaying = false;
+                _isStanding = true;
+                _standTimer = 0f;
             }
         }
 
-        public void StopMoving()
+        public void CustomAgentStopMoving()
         {
             if (_actorMoveCoroutine != null)
                 StopCoroutine(_actorMoveCoroutine);
@@ -120,35 +102,38 @@ namespace Niantic.Lightship.AR.NavigationMesh
         public void OnWalkStart()
         {
             _animController.SetWalking(true);
+            _isStanding = false;
+            _isIdlePlaying = false;
+            _standTimer = 0f;
         }
 
         public void OnWalkEnd()
         {
             _animController.SetWalking(false);
             _animController.SetStand(true);
+            _animController.SetIdle(false);
+            _isStanding = true;
+            _isIdlePlaying = false;
+            _standTimer = 0f;
         }
 
-        public void SetDestination(Vector3 destination)
+        public void CustomAgentSetDestination(Vector3 destination)
         {
-            StopMoving();
+            CustomAgentStopMoving();
 
             if (_lightshipNavMesh == null)
                 return;
 
-            _animController?.SetWalking(true);
-
-            _destination = destination;
-
-            Vector3 startOnBoard;
-            _lightshipNavMesh.FindNearestFreePosition(transform.position, out startOnBoard);
-
+            _lightshipNavMesh.FindNearestFreePosition(transform.position, out var startOnBoard);
             bool result = _lightshipNavMesh.CalculatePath(startOnBoard, destination, _agentConfig, out _path);
 
             if (!result)
-                State = AgentNavigationState.Idle;
+            {
+                CustomAgentState = CustomAgentNavigationState.Idle;
+            }
             else
             {
-                State = AgentNavigationState.HasPath;
+                CustomAgentState = CustomAgentNavigationState.HasPath;
                 _actorMoveCoroutine = StartCoroutine(Move(this.transform, _path.Waypoints));
             }
         }
@@ -161,29 +146,17 @@ namespace Niantic.Lightship.AR.NavigationMesh
             if (_lightshipNavMesh.IsOnNavMesh(transform.position, 0.2f))
                 return;
 
-            List<Waypoint> pathToNavMesh = new List<Waypoint>();
-            Vector3 nearestPosition;
-            _lightshipNavMesh.FindNearestFreePosition(transform.position, out nearestPosition);
+            _lightshipNavMesh.FindNearestFreePosition(transform.position, out var nearestPosition);
 
-            _destination = nearestPosition;
-
-            pathToNavMesh.Add(new Waypoint
-            (
-                transform.position,
-                Waypoint.MovementType.Walk,
-                Utils.PositionToTile(transform.position, _lightshipNavMesh.Settings.TileSize)
-            ));
-
-            pathToNavMesh.Add(new Waypoint
-            (
-                nearestPosition,
-                Waypoint.MovementType.SurfaceEntry,
-                Utils.PositionToTile(nearestPosition, _lightshipNavMesh.Settings.TileSize)
-            ));
+            var pathToNavMesh = new List<Waypoint>
+            {
+                new Waypoint(transform.position, Waypoint.MovementType.Walk, Utils.PositionToTile(transform.position, _lightshipNavMesh.Settings.TileSize)),
+                new Waypoint(nearestPosition, Waypoint.MovementType.SurfaceEntry, Utils.PositionToTile(nearestPosition, _lightshipNavMesh.Settings.TileSize))
+            };
 
             _path = new Path(pathToNavMesh, Path.Status.PathComplete);
             _actorMoveCoroutine = StartCoroutine(Move(this.transform, _path.Waypoints));
-            State = AgentNavigationState.HasPath;
+            CustomAgentState = CustomAgentNavigationState.HasPath;
         }
 
         private IEnumerator Move(Transform actor, IList<Waypoint> path)
@@ -193,59 +166,41 @@ namespace Niantic.Lightship.AR.NavigationMesh
             var interval = 0.0f;
             var destIdx = 0;
 
+            OnWalkStart();
+
             while (destIdx < path.Count)
             {
                 var destination = path[destIdx].WorldPosition;
-
-                //make sure the destination is on the mesh
-                //LightshipNavMesh is an average height so can be under/over the mesh
-                //the nav agent should always stand on the mesh, so using a ray cast to lift them up/down as they move.
                 var from = destination + Vector3.up;
                 var dir = Vector3.down;
 
-                RaycastHit hit;
-
-                if (Physics.Raycast(from, dir, out hit, 100, _lightshipNavMesh.Settings.LayerMask))
+                if (Physics.Raycast(from, dir, out RaycastHit hit, 100, _lightshipNavMesh.Settings.LayerMask))
                 {
                     destination = hit.point;
                 }
 
-                //do i need to jump or walk to the target point
                 if (path[destIdx].Type == Waypoint.MovementType.SurfaceEntry)
                 {
                     yield return new WaitForSeconds(0.5f);
-
-                    _actorJumpCoroutine = StartCoroutine
-                    (
-                        Jump(actor, actor.position, destination)
-                    );
-
+                    _actorJumpCoroutine = StartCoroutine(Jump(actor, actor.position, destination));
                     yield return _actorJumpCoroutine;
-
                     _actorJumpCoroutine = null;
                     startPosition = actor.position;
                     startRotation = actor.rotation;
                 }
                 else
                 {
-                    //move on step towards target waypoint
-                    interval += Time.deltaTime * walkingSpeed;
+                    interval += Time.deltaTime * _customWalkingSpeed;
                     actor.position = Vector3.Lerp(startPosition, destination, interval);
                 }
 
-                //face the direction we are moving
                 Vector3 lookRotationTarget = (destination - transform.position);
-
-                //ignore up/down we dont want the creature leaning forward/backward.
                 lookRotationTarget.y = 0.0f;
                 lookRotationTarget = lookRotationTarget.normalized;
 
-                //check for bad rotation
                 if (lookRotationTarget != Vector3.zero)
-                    transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(lookRotationTarget),
-                        interval);
+                    transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(lookRotationTarget), interval);
 
-                //have we reached our target position, if so go to the next waypoint
                 if (Vector3.Distance(actor.position, destination) < 0.01f)
                 {
                     startPosition = actor.position;
@@ -258,28 +213,28 @@ namespace Niantic.Lightship.AR.NavigationMesh
             }
 
             _actorMoveCoroutine = null;
-            State = AgentNavigationState.Idle;
+            CustomAgentState = CustomAgentNavigationState.Idle;
+            OnWalkEnd();
         }
 
         private IEnumerator Jump(Transform actor, Vector3 from, Vector3 to, float speed = 2.0f)
         {
             var interval = 0.0f;
-            Quaternion startRotation = actor.rotation;
+            var startRotation = actor.rotation;
             var height = Mathf.Max(0.1f, Mathf.Abs(to.y - from.y));
+
             while (interval < 1.0f)
             {
                 interval += Time.deltaTime * speed;
-                Vector3 rotation = to - from;
-                rotation = Vector3.ProjectOnPlane(rotation, Vector3.up).normalized;
+
+                Vector3 rotation = Vector3.ProjectOnPlane(to - from, Vector3.up).normalized;
                 if (rotation != Vector3.zero)
                     transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(rotation), interval);
+
                 var p = Vector3.Lerp(from, to, interval);
-                actor.position = new Vector3
-                (
+                actor.position = new Vector3(
                     p.x,
-                    -4.0f * height * interval * interval +
-                    4.0f * height * interval +
-                    Mathf.Lerp(from.y, to.y, interval),
+                    -4.0f * height * interval * interval + 4.0f * height * interval + Mathf.Lerp(from.y, to.y, interval),
                     p.z
                 );
 
@@ -290,4 +245,3 @@ namespace Niantic.Lightship.AR.NavigationMesh
         }
     }
 }
-
