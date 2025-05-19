@@ -96,7 +96,14 @@ namespace Niantic.Lightship.AR.NavigationMesh
         public void CustomAgentStopMoving()
         {
             if (_actorMoveCoroutine != null)
+            {
                 StopCoroutine(_actorMoveCoroutine);
+                _actorMoveCoroutine = null;
+            }
+
+            CustomAgentState = CustomAgentNavigationState.Idle;
+            _path = new Path(null, Path.Status.PathInvalid);
+            OnWalkEnd();
         }
 
         public void OnWalkStart()

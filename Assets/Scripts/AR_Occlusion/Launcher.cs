@@ -31,5 +31,13 @@ public class Launcher : MonoBehaviour
 
         var thing = Instantiate(_prefabWithRigidbody, pos + forw * 0.4f, Quaternion.identity);
         thing.AddForce(forw * 200.0f);
+
+        // 캐릭터가 타겟을 따라가도록 설정
+        var agent = FindObjectOfType<AgentChasePlayer>();
+        if (agent != null)
+        {
+            agent.SetTarget(thing.transform);
+
+        }
     }
 }
