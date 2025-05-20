@@ -3,7 +3,157 @@ guid: c3219a55bd0291346bb8f7f6bfe9acf3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 61620520d090caa4b8ae45edf182aab2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat
+    second: {fileID: 2100000, guid: d1862ac2e2f18d44099d004abd0beddf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hat_Ribon
+    second: {fileID: 2100000, guid: d99e536b9d60344479d6c984c0377a86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lab
+    second: {fileID: 2100000, guid: cea7a7615282a5146b6a418f6393de31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tungue
+    second: {fileID: 2100000, guid: 3469ae08cc15d514f8f60a4a1470d502, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ago
+    second: {fileID: 2100000, guid: b05af301212667641af2caa550c6302d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baby_dino_taxture
+    second: {fileID: 2100000, guid: 23e45b8cd8573da4d846e48c80f6cbb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: book
+    second: {fileID: 2100000, guid: 22c1908d95f3d094386fc6405df7ed0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cafe
+    second: {fileID: 2100000, guid: 505a2d09831937941a01637d2ed319f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: check_2
+    second: {fileID: 2100000, guid: 4559db246bddf324ebce484d0c16904f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cheek
+    second: {fileID: 2100000, guid: 830ed46e6fcf1854fbd292e240aa682d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_meterial
+    second: {fileID: 2100000, guid: cfc627d0e59077f48bfcf0d7fb90d4e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glasses
+    second: {fileID: 2100000, guid: a01ea1b33e2f07d47bbca76902acfa4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: head
+    second: {fileID: 2100000, guid: 49468a553d350ac408fc6f2724a3f006, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: long_sleeve
+    second: {fileID: 2100000, guid: 0b6327ba9b7a9e94aa80aa80504b3000, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ripline
+    second: {fileID: 2100000, guid: e99e08d51a86b7a4bb7b5dd203284da3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shirt
+    second: {fileID: 2100000, guid: 08a7919697cf66749b8e48635cb4d32f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shirt_check
+    second: {fileID: 2100000, guid: f85823fca054657438b01d1a996e79be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shirt_short
+    second: {fileID: 2100000, guid: c6d2a70ac1425e84184ecf99f603f277, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sports_texture
+    second: {fileID: 2100000, guid: ad4b42831d2dcf34dbe835051eec22ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tooth
+    second: {fileID: 2100000, guid: ad7bd3ce3e0d4cd4d9476a123776402d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: BodyTexture
+    second: {fileID: 2800000, guid: 94e99313f22bbca40b6a56a4992f4cf0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: EyeTexture
+    second: {fileID: 2800000, guid: c782855e0c5f6e14f8a80dc9c7078e02, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: baby_dino_texture
+    second: {fileID: 2800000, guid: 5bb96cf12f733b84894198d6aafbcbe9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: book
+    second: {fileID: 2800000, guid: d001acf17dd47bb40b13e1f06d90e230, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cafe
+    second: {fileID: 2800000, guid: f151414ecac99524aa81533fc526bff4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dark_blue_check
+    second: {fileID: 2800000, guid: 3ce684c860068ee4a9fb0ade94ec632d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lab_texture
+    second: {fileID: 2800000, guid: ca08951283b1b464cb7177e1d97330da, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: preview
+    second: {fileID: 2800000, guid: dd49b1d7dbec04141be61c380f47fa98, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sports
+    second: {fileID: 2800000, guid: cb010298ca7fd3c49b638ef4a42668cf, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

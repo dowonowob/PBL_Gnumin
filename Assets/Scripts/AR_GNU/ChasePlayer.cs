@@ -37,18 +37,14 @@ public class AgentChasePlayer : MonoBehaviour
         if (timer >= updateInterval)
         {
             timer = 0f;
-            Vector3 targetPos;
 
-            if (chaseTarget != null)
-            {
-                targetPos = chaseTarget.position;
-            }
-            else
-            {
-                Vector3 forward = mainCamera.transform.forward;
-                Vector3 down = mainCamera.transform.up * verticalOffset;
-                targetPos = mainCamera.transform.position + forward * followDistance + down;
-            }
+            float deviceSpeed = DeviceMotionTracker.Instance.Speed;
+            float agentSpeed = Mathf.Clamp(deviceSpeed * 1.5f, 1.0f, 6.0f);
+            agent.SetWalkingSpeed(agentSpeed);
+
+            Vector3 targetPos = (chaseTarget != null)
+                ? chaseTarget.position
+                : mainCamera.transform.position + mainCamera.transform.forward * followDistance + mainCamera.transform.up * verticalOffset;
 
             agent.CustomAgentSetDestination(targetPos);
         }
@@ -72,13 +68,16 @@ public class AgentChasePlayer : MonoBehaviour
     private IEnumerator EatCoroutine()
     {
         isEating = true;
-
         agent.CustomAgentStopMoving();
 
         animator.SetTrigger("eatTrigger");
 
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("eat"));
+
+        float eatDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(eatDuration);
 
         isEating = false;
     }
+
 }

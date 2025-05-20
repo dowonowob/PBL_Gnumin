@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereManager : MonoBehaviour
+public class ObjManager : MonoBehaviour
 {
-    public static SphereManager Instance { get; private set; }
+    public static ObjManager Instance { get; private set; }
 
-    private readonly Queue<Transform> _sphereQueue = new Queue<Transform>();
-    private const int MaxSpheres = 3;
+    private readonly Queue<Transform> _objQueue = new Queue<Transform>();
+    private const int MaxObj = 3;
+
+    [Header("Ground Plane Control")]
+    public GameObject groundPlanePrefab;      
+    private GameObject _groundPlaneInstance;  
 
     private void Awake()
     {
@@ -18,27 +22,40 @@ public class SphereManager : MonoBehaviour
         Instance = this;
     }
 
-    public void RegisterSphere(Transform sphere)
+    public void RegisterObj(Transform obj)
     {
-        if (_sphereQueue.Count >= MaxSpheres)
+        if (_objQueue.Count >= MaxObj)
         {
-            var oldSphere = _sphereQueue.Dequeue();
-            if (oldSphere != null) Destroy(oldSphere.gameObject);
+            var oldObj = _objQueue.Dequeue();
+            if (oldObj != null)
+                Destroy(oldObj.gameObject);
         }
 
-        _sphereQueue.Enqueue(sphere);
-        AgentChasePlayer.Instance.SetTarget(_sphereQueue.Peek());
+        _objQueue.Enqueue(obj);
+        AgentChasePlayer.Instance.SetTarget(_objQueue.Peek());
+
+        if (_groundPlaneInstance == null && groundPlanePrefab != null)
+        {
+            _groundPlaneInstance = Instantiate(groundPlanePrefab);
+        }
     }
 
-    public void RemoveSphere(Transform sphere)
+    public void RemoveObj(Transform obj)
     {
-        if (_sphereQueue.Count > 0 && _sphereQueue.Peek() == sphere)
+        if (_objQueue.Count > 0 && _objQueue.Peek() == obj)
         {
-            _sphereQueue.Dequeue();
-            if (_sphereQueue.Count > 0)
-                AgentChasePlayer.Instance.SetTarget(_sphereQueue.Peek());
+            _objQueue.Dequeue();
+
+            if (_objQueue.Count > 0)
+                AgentChasePlayer.Instance.SetTarget(_objQueue.Peek());
             else
                 AgentChasePlayer.Instance.ClearTarget();
+        }
+
+        if (_objQueue.Count == 0 && _groundPlaneInstance != null)
+        {
+            Destroy(_groundPlaneInstance);
+            _groundPlaneInstance = null;
         }
     }
 }

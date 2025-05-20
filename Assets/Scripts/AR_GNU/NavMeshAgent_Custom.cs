@@ -141,7 +141,7 @@ namespace Niantic.Lightship.AR.NavigationMesh
             else
             {
                 CustomAgentState = CustomAgentNavigationState.HasPath;
-                _actorMoveCoroutine = StartCoroutine(Move(this.transform, _path.Waypoints));
+                _actorMoveCoroutine = StartCoroutine(Move(this.transform, _path.Waypoints)); //
             }
         }
 
@@ -222,6 +222,11 @@ namespace Niantic.Lightship.AR.NavigationMesh
             _actorMoveCoroutine = null;
             CustomAgentState = CustomAgentNavigationState.Idle;
             OnWalkEnd();
+        }
+
+        public void SetWalkingSpeed(float speed)
+        {
+            _customWalkingSpeed = speed;
         }
 
         private IEnumerator Jump(Transform actor, Vector3 from, Vector3 to, float speed = 2.0f)

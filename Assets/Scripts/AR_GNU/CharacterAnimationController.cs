@@ -4,7 +4,7 @@ public class CharacterAnimationController : MonoBehaviour
 {
     private Animator _animator;
 
-    public float idleDelay = 10f;
+    //public float idleDelay = 10f;
 
     private void Awake()
     {
