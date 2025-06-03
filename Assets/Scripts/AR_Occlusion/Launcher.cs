@@ -25,19 +25,20 @@ public class Launcher : MonoBehaviour
 
     private void OnFire(InputAction.CallbackContext context)
     {
-        var cam = Camera.main;
-        var pos = cam.transform.position;
-        var forw = cam.transform.forward;
+        Vector2 screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
 
-        var thing = Instantiate(_prefabWithRigidbody, pos + forw * 0.4f, Quaternion.identity);
-        thing.AddForce(forw * 200.0f);
+        var cam = Camera.main;
+        var spawnPos = cam.transform.position + ray.direction * 0.4f;
+
+        var thing = Instantiate(_prefabWithRigidbody, spawnPos, Quaternion.identity);
+        thing.AddForce(ray.direction * 200.0f);
 
         // 캐릭터가 타겟을 따라가도록 설정
         var agent = FindObjectOfType<AgentChasePlayer>();
         if (agent != null)
         {
             agent.SetTarget(thing.transform);
-
         }
     }
 }

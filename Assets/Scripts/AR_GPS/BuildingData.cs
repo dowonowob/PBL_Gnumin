@@ -1,12 +1,15 @@
-[System.Serializable]
+using System;
+using UnityEngine;
+
+[Serializable]
 public class BuildingData
 {
-    public string buildingNumber;
-    public string buildingName;
-    public string buildingDescription;
     public float latitude;
-    public float longitude;
-    public string campusName;
+    public string buildingDescription;
+    public string buildingName;
+    public string buildingNumber;
     public string pictureName;
+    public string campusName;
+    public float longitude;
     public string ginuCharacter;
 }

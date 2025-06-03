@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using UnityEngine;
 
-[System.Serializable]
-public class Campus
+[CreateAssetMenu(fileName = "CampusData", menuName = "ScriptableObjects/CampusData", order = 1)]
+public class Campus : ScriptableObject
 {
     public List<BuildingData> Sheet1 = new List<BuildingData>();
 }

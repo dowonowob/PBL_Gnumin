@@ -12,42 +12,46 @@ using System.Linq;
 
 public class TourManager : MonoBehaviour
 {
-    public Transform arCamera;
-    public ARRaycastManager raycastManager;
+    public Transform arCamera; //MainCamera
+    public ARRaycastManager raycastManager; //Obj 인식할 RaycastManager
 
-    public Campus campus;
-    private Vector2 gpsCoor;
-    public bool isFirst = true;
-    public bool isDistance = false;
-    public double min;
+    public Campus campus; //csv file(maybe)
+    private Vector2 gpsCoor; //누구세요?
+    public bool isFirst = true; //이게 뭐징
+    public bool isDistance = false; //이건 또 뭐징
+    public double min; //얘도 모르겠당
 
-    public TextMeshProUGUI textUI_1; // 건물 이름 표시
-    public TextMeshProUGUI textUI_2; // 남은 거리 표시
-    public TextMeshProUGUI textUI_3; // 건물 설명 표시
+    public TextMeshProUGUI textUI_1; //건물 이름 표시
+    public TextMeshProUGUI textUI_2; //남은 거리 표시
+    public TextMeshProUGUI textUI_3; //건물 설명 표시
 
-    public Button classInfobtn;
+    public Button classInfobtn; //건물 상세 보기
 
-    public TextMeshProUGUI gpsUI;
-    public TextMeshProUGUI infoUI;
-    public TextMeshProUGUI campusUI;
+    public TextMeshProUGUI gpsUI; //gps on off 상태
+    public TextMeshProUGUI infoUI; //
+    public TextMeshProUGUI campusUI; //현재 어느 캠퍼스인지
 
-    public GameObject panel;
-    public Image img;
-    public GameObject canvas;
-    public GameObject placeObject;
+    public GameObject panel; //어느 패널인지 확인
+    public Image img; //아마 Info창에 뜨는 대학 img이지 싶음
+    public GameObject canvas; //머선캔버스고
+    public GameObject placeObject; //하트 오브젝트
     public Transform placeRoot;
     public GameObject defaultGinuPrefab;
 
     IEnumerator Start()
     {
-        min = -1;
-        classInfobtn.gameObject.SetActive(false);
-        panel.SetActive(false);
+        StartCoroutine(WaitForFirstPlane());
 
-        while (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        canvas.SetActive(false);
+
+        min = -1;
+        classInfobtn.gameObject.SetActive(false); //초기에는 Info버튼 비활성화
+        panel.SetActive(false); //이거 보니까 InfoPanel인 듯?
+
+        while (!Permission.HasUserAuthorizedPermission(Permission.FineLocation)) //위치 권한 요청
         {
             yield return null;
-            Permission.RequestUserPermission(Permission.FineLocation);
+            Permission.RequestUserPermission(Permission.FineLocation); 
         }
 
         if (!Input.location.isEnabledByUser)
@@ -56,7 +60,7 @@ public class TourManager : MonoBehaviour
         Input.location.Start(10, 1);
 
         int maxWait = 20;
-        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0) 
         {
             yield return new WaitForSeconds(1);
             maxWait--;
@@ -81,19 +85,21 @@ public class TourManager : MonoBehaviour
                 yield return null;
             }
         }
+
     }
 
     void Update()
     {
+
         if (Input.location.isEnabledByUser)
         {
-            if (Input.location.status == LocationServiceStatus.Running)
+            if (Input.location.status == LocationServiceStatus.Running) //GPS 작동 중이면
             {
                 gpsUI.text = "<color=green>●</color> GPS 동작중";
 
                 List<double> distanceList = new List<double>();
 
-                for (int i = 0; i < campus.Sheet1.Count; i++)
+                for (int i = 0; i < campus.Sheet1.Count; i++) //
                 {
                     float buildingLat = campus.Sheet1[i].latitude;
                     float buildingLong = campus.Sheet1[i].longitude;
@@ -112,29 +118,43 @@ public class TourManager : MonoBehaviour
                 {
                     if (i == minIndex)
                     {
-                        if (min <= 50f)
+                        if (min <= 100f)
                         {
                             if (campus.Sheet1[i].campusName == "가좌")
                             {
-                                string bNum = campus.Sheet1[i].buildingNumber;
-                                classInfobtn.gameObject.SetActive(true);
-                                classInfobtn.onClick.RemoveAllListeners();
-                                classInfobtn.onClick.AddListener(() => ClassInfoChange(bNum));
+
+                                isDistance = true;
+                                campusUI.text = campus.Sheet1[i].campusName + " 캠퍼스";
+                                panel.SetActive(true);
+                                infoUI.text = $"근처 ({(int)Math.Round(min)}m) 이내에\n{campus.Sheet1[i].buildingName}이(가) 있습니다.\n\n * 장소 정보를 확인하려면 지누를 눌러주세요. *";
+
+                                if (isFirst)
+                                    updateCenterObject(minIndex); // ← 인자 전달
+
+                                string displayNumber = campus.Sheet1[i].buildingNumber;
+                                textUI_1.text = $"{campus.Sheet1[i].buildingName} ({displayNumber})";
+                                textUI_2.text = $"까지 남은 거리:\n{(int)Math.Round(min)}m";
+
+                                string rawName = campus.Sheet1[i].pictureName;
+                                string trimmedName = rawName.Substring(rawName.IndexOf('_') + 1);  // "_" 이후만 추출
+
+                                string path = "이미지_동번호/" + trimmedName;
+                                Sprite sprite = Resources.Load<Sprite>(path);
+
+                                if (sprite != null)
+                                {
+                                    img.sprite = sprite;
+                                    img.color = Color.white;
+                                }
+                                else
+                                {
+                                    img.sprite = null;
+                                    img.color = Color.black;
+                                }
+
+                                textUI_3.text = campus.Sheet1[i].buildingDescription;
                             }
 
-                            isDistance = true;
-                            campusUI.text = campus.Sheet1[i].campusName + " 캠퍼스";
-                            panel.SetActive(true);
-                            infoUI.text = $"근처 ({(int)Math.Round(min)}m) 이내에\n{campus.Sheet1[i].buildingName}이(가) 있습니다.\n\n * 장소 정보를 확인하려면 하트를 눌러주세요. *";
-
-                            if (isFirst) updateCenterObject();
-
-                            string displayNumber = campus.Sheet1[i].buildingNumber;
-                            textUI_1.text = $"{campus.Sheet1[i].buildingName} ({displayNumber})";
-                            textUI_2.text = $"까지 남은 거리:\n{(int)Math.Round(min)}m";
-
-                            img.sprite = Resources.Load<Sprite>(campus.Sheet1[i].pictureName);
-                            textUI_3.text = campus.Sheet1[i].buildingDescription;
                         }
                         else
                         {
@@ -177,7 +197,16 @@ public class TourManager : MonoBehaviour
         SceneManager.LoadScene($"Class{buildingNumber}");
     }
 
-    private void updateCenterObject()
+    private IEnumerator WaitForFirstPlane()
+    {
+        // 평면이 감지될 때까지 대기
+        while (FindObjectsOfType<ARPlane>().Length == 0)
+        {
+            yield return null;
+        }
+    }
+
+    private void updateCenterObject(int minIndex)
     {
         Vector3 screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -186,11 +215,39 @@ public class TourManager : MonoBehaviour
         if (hits.Count > 0)
         {
             isFirst = false;
-            placeObject.SetActive(true);
+
+            // ginuCharacter 기반 프리팹 로드
+            string ginuCharacter = campus.Sheet1[minIndex].ginuCharacter;
+            string prefabPath = "Characters/" + ginuCharacter;
+
+            GameObject ginuPrefab = Resources.Load<GameObject>(prefabPath);
+
+            if (ginuPrefab != null)
+            {
+                if (placeObject != null) Destroy(placeObject);
+                placeObject = Instantiate(ginuPrefab, Vector3.zero, Quaternion.identity);
+
+            }
+            else
+            {
+                Debug.LogWarning($"[TourManager] 캐릭터 프리팹 로드 실패: {prefabPath}");
+                placeObject = Instantiate(ginuPrefab, Vector3.zero, Quaternion.identity);
+
+            }
+
+            // 위치 설정
             Pose placePose = hits[0].pose;
             placePose.position.y = arCamera.position.y - 0.5f;
-            placeObject.transform.SetPositionAndRotation(placePose.position, placePose.rotation);
-            placeObject.transform.LookAt(arCamera);
+            placeObject.transform.position = placePose.position;
+
+            // 수평 방향으로 카메라 바라보도록
+            Vector3 lookDir = arCamera.position - placePose.position;
+            lookDir.y = 0;
+
+            if (lookDir != Vector3.zero)
+                placeObject.transform.rotation = Quaternion.LookRotation(lookDir);
+
+            placeObject.SetActive(true);
         }
     }
 
@@ -203,9 +260,17 @@ public class TourManager : MonoBehaviour
         if (hits.Count > 0)
         {
             Pose placePose = hits[0].pose;
-            placePose.position.y = arCamera.position.y - 0.5f;
-            placeObject.transform.SetPositionAndRotation(placePose.position, placePose.rotation);
-            placeObject.transform.LookAt(arCamera);
+            placePose.position.y = arCamera.position.y - 1.5f;
+            placeObject.transform.position = placePose.position;
+
+            // 수평 방향으로만 카메라 바라보기
+            Vector3 lookDir = arCamera.position - placePose.position;
+            lookDir.y = 0;
+
+            if (lookDir != Vector3.zero)
+            {
+                placeObject.transform.rotation = Quaternion.LookRotation(lookDir);
+            }
         }
     }
 
@@ -218,9 +283,22 @@ public class TourManager : MonoBehaviour
         if (hits.Count > 0)
         {
             Pose placePose = hits[0].pose;
-            placePose.position.y = arCamera.position.y - 0.5f;
-            canvas.transform.SetPositionAndRotation(placePose.position, placePose.rotation);
-            canvas.transform.LookAt(arCamera);
+            placePose.position.y = arCamera.position.y - 1.5f;
+
+            Vector3 directionToCamera = arCamera.position - placePose.position;
+            float distance = directionToCamera.magnitude;
+
+            float minDistance = 0.8f; // 최소 거리 (미터)
+
+            // 너무 가까우면 보정
+            if (distance < minDistance)
+            {
+                Vector3 safeDirection = directionToCamera.normalized;
+                placePose.position = arCamera.position - safeDirection * minDistance;
+                placePose.position.y = arCamera.position.y - 1.5f; // 높이 재보정
+            }
+
+            canvas.transform.SetPositionAndRotation(placePose.position, Quaternion.LookRotation(directionToCamera));
         }
     }
 
