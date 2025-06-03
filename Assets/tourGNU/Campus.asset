@@ -1,0 +1,1208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb3ed2ea16ee3b41953809a485ef926, type: 3}
+  m_Name: Campus
+  m_EditorClassIdentifier: 
+  Sheet1:
+  - latitude: 35.15391
+    longitude: 128.10162
+    buildingName: "\uB300\uD559\uBCF8\uBD80"
+    buildingDescription: "1\uCE35 : \uB18D\uD611 / \uC2E0\uD611 / \uB300\uD559\uB178\uC870
+      / \uD559\uC0AC\uC9C0\uC6D0\uACFC / \uC8FC\uCC28\uAD00\uB9AC\uC2E4 / \uACBD\uBE44\uC2E4
+      / \uB2F9\uC9C1\uC2E4 / \uD559\uC0DD\uACFC / \uACF5\uBB34\uC6D0\uC9C1\uC6D0\uD611\uC758\uD68C
+      / \uBB38\uC11C\uCDE8\uAE09\uC18C\n\n2\uCE35 : \uC608\uBE44\uAD70\uC5F0\uB300
+      / \uD589\uC815\uC9C0\uC6D0\uACFC / \uC6D0\uACA9\uADFC\uBB34\uC9C0\uC6D0\uC13C\uD130
+      / \uD559\uC0DD\uC0C1\uB2F4\uC2E4 /\uAD50\uBB34\uACFC / \uC720\uD559\uC0DD\uC0C1\uB2F4\uC2E4
+      / \uB300\uC678\uD611\uB825\uACFC(\uD64D\uBCF4\uC2E4) / \uB300\uC678\uD611\uB825\uACFC(\uAD6D\uC81C\uAD50\uB958\uD300)\n\n3\uCE35
+      : \uC811\uACAC\uC2E4 / \uCD1D\uC7A5\uC9D1\uBB34\uC2E4 / \uC0C1\uD669\uC2E4
+      / \uAD50\uD559\uBD80\uCD1D\uC7A5 / \uB300\uD559\uC6D0\uC7A5\uC2E4 / \uD559\uC0DD\uCC98\uC7A5\uC2E4
+      / \uD589\uC815\uBCF8\uBD80\uC7A5\uC2E4 / \uBE44\uC11C\uC2E4 / \uAD50\uC721\uD601\uC2E0\uCC98\uC7A5\uC2E4
+      / \uC785\uD559\uCC98\uC7A5\uC2E4\n\n4\uCE35 : \uAD50\uC721\uD601\uC2E0\uC9C0\uC6D0\uACFC
+      / \uAD50\uC721\uACFC\uC815\uC9C0\uC6D0\uC2E4 / \uC548\uC804\uAD00\uB9AC\uBCF8\uBD80
+      / \uC18C\uD68C\uC758\uC2E4 / \uC548\uC804\uAD00\uB9AC\uBCF8\uBD80\uC7A5\uC2E4
+      / \uB300\uD559\uC6D0\uC2E4\uC7A5\uC2E4 / \uB300\uD559\uC6D0\uC0AC\uBB34\uC2E4\n\n5\uCE35
+      : \uB300\uD68C\uC758\uC2E4 / \uC911\uD68C\uC758\uC2E4 / \uAD50\uD658\uAE30\uACC4\uC2E4
+      / \uB300\uD559\uD3C9\uC758\uC6D0\uD68C / \uB300\uD559\uD3C9\uC758\uC6D0 \uC758\uC7A5\uC2E4"
+    buildingNumber: 1
+    pictureName: "\uAC00\uC88C_1"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153217
+    longitude: 128.0995
+    buildingName: "\uC911\uC559\uB3C4\uC11C\uAD00"
+    buildingDescription: "1\uCE35: \uC778\uD3EC\uBA54\uC774\uC158 \uB370\uC2A4\uD06C(\uB300\uCD9C\uBC18\uB0A9)\n\n2\uCE35:
+      \uBD81\uC2A4\uD018\uC5B4\uC874(PC\uC874, \uADF8\uB8F9 \uC2A4\uD130\uB514\uB8F8)\n\n\uC99D\uCD95\uBD802\uCE35~3\uCE35:
+      \uC5F4\uB78C\uC2E4\n\n3\uCE35: \uC5F4\uB78C\uC2E4\n\n4\uCE35~5\uCE35: \uC790\uB8CC\uC2E4\n\n6\uCE35:
+      \uC0AC\uBB34\uC2E4, \uB3C5\uC11C\uC778\uC99D\uD3C9\uAC00\uC2E4"
+    buildingNumber: 2
+    pictureName: "\uAC00\uC88C_2"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153637
+    longitude: 128.09734
+    buildingName: "\uD559\uC0DD\uD68C\uAD00"
+    buildingDescription: "\uD559\uC0DD\uB4E4\uC744 \uC704\uD55C \uD3B8\uC758\uC2DC\uC124\uACFC
+      \uD559\uC0DD\uAE30\uAD6C\uAC00 \uC788\uC2B5\uB2C8\uB2E4.\n\n1\uCE35 : \uC911\uC559\uC2DD\uB2F9,
+      \uC911\uC559\uB9E4\uC810, \uCEE4\uD53C\uD640 \uBCA0\uC774\uCEE4\uB9AC\n\n2\uCE35
+      : \uC7A5\uC560\uD559\uC0DD\uC9C0\uC6D0\uC13C\uD130, \uC7A5\uC560\uD559\uC0DD
+      \uC815\uBCF4\uB098\uB214\uD130, \uC2A4\uD130\uB514\uB8F8\n\n3\uCE35 : \uC18C\uADF9\uC7A5,
+      \uC778\uAD8C\uC13C\uD130, \uD559\uC0DD\uC790\uCE58\uAE30\uAD6C(\uCD1D\uD559\uC0DD\uD68C,
+      \uCD1D\uB300\uC758\uC6D0\uD68C, \uCD1D\uB3D9\uC544\uB9AC\uC5F0\uD569\uD68C)\n\n4\uCE35~6\uCE35
+      : \uB3D9\uC544\uB9AC\uBC29"
+    buildingNumber: 3
+    pictureName: "\uAC00\uC88C_3"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153725
+    longitude: 128.09613
+    buildingName: "\uD559\uC220\uC815\uBCF4\uAD00"
+    buildingDescription: "\uC815\uBCF4\uC804\uC0B0\uCC98, \uB3C4\uC11C\uAD00 \uD559\uC220\uC790\uB8CC\uC2E4,
+      \uAD50\uC721\uD601\uC2E0\uCC98 \uB4F1\uC774 \uC788\uC2B5\uB2C8\uB2E4.\n\n\uC9C0\uD5581\uCE35
+      : \uBCF4\uC874\uC11C\uACE0\n\n1\uCE35 : \uC815\uBCF4\uC804\uC0B0\uCC98 / \uC815\uBCF4\uD654\uAD50\uC721\uC2E4
+      / \uAD50\uC721\uD601\uC2E0\uCC98(\uC2E4\uC2B5\uC2E4) / \uCD9C\uD310\uBD80(\uC11C\uACE0)\n\n2\uCE35
+      : \uC815\uBCF4\uC804\uC0B0\uCC98 / \uC2A4\uB9C8\uD2B8\uACF5\uB3D9\uCCB4 \uC0AC\uC5C5\uB2E8
+      / \uAD50\uC721\uD601\uC2E0\uCC98(\uC2A4\uD29C\uB514\uC624)\n\n3\uCE35 : \uB3C4\uC11C\uAD00
+      \uD559\uC220\uC790\uB8CC\uC2E4 / \uAC1C\uC778\xB7\uB2E8\uCCB4 \uD559\uC2B5\uC2E4"
+    buildingNumber: 4
+    pictureName: "\uAC00\uC88C_4"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155373
+    longitude: 128.10301
+    buildingName: "\uCCB4\uC721\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 5
+    pictureName: "\uAC00\uC88C_5"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155067
+    longitude: 128.10593
+    buildingName: "\uAC1C\uBC29\uD615 \uC2A4\uD3EC\uCE20 \uCF64\uD50C\uB809\uC2A4"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uAE30\uACC4\uC2E4 / \uBCF4\uC77C\uB7EC\uC2E4
+      / \uC138\uD0C1\uC2E4\n\n1\uCE35 : \uC218\uC601\uC7A5 / \uD0A4\uC988\uC9D0 /
+      \uC6B4\uC601\uD300 / \uC9C0\uC6D0\uD300 / \uC2E4\uC7A5\uC2E4 / \uC548\uB0B4\uB370\uC2A4\uD06C
+      / GS25 / \uADF8\uB9B0\uC2A4\uBBF8\uC2A4&\uC0CC\uB4DC\uBCA0\uC774 / 1\uCE35
+      \uD53C\uD2B8\uB2C8\uC2A4\uC13C\uD130\n\n2\uCE35 : \uD53C\uD2B8\uB2C8\uC2A4\uC13C\uD130
+      / GX\uB8F8 / PT\uB8F8 / \uCF54\uC5B4&\uBC1C\uB780\uC2A4\uB8F8 / \uB514\uC9C0\uD138
+      \uC11C\uD0B7 \uD2B8\uB808\uC774\uB2DD\uB8F8 / \uD391\uC154\uB110\uB8F8\n\n3\uCE35
+      : \uCCB4\uC721\uC9C4\uD765\uC6D0\uC7A5\uC2E4 / \uB300\uAE30\uAD6C\uD544\uB77C\uD14C\uC2A4\uB8F8
+      / \uC18C\uB3C4\uAD6C\uD544\uB77C\uD14C\uC2A4\uB8F8 / \uC694\uAC00\uB8F8 / \uC138\uBBF8\uB098\uC2E4"
+    buildingNumber: 6
+    pictureName: "\uAC00\uC88C_6"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15463
+    longitude: 128.10179
+    buildingName: "GNU\uCEE8\uBCA4\uC158\uC13C\uD130\xB7\uC785\uD559\uCC98\xB7\uC9C4\uB85C\uCDE8\uC5C5\uC9C0\uC6D0\uC2E4"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uBCF4\uC874\uC11C\uACE0\n\n1\uCE35
+      : \uC9C4\uB85C\uCDE8\uC5C5\uC9C0\uC6D0\uC2E4 / \uB300\uD559\uC77C\uC790\uB9AC\uD50C\uB7EC\uC2A4\uC13C\uD130
+      / USG\uACF5\uC720\uB300\uD559 \uD559\uC0DD\uB77C\uC6B4\uC9C0 /\uD604\uC7A5\uC2E4\uC2B5\uC9C0\uC6D0\uC13C\uD130
+      / \uC7A1\uC544\uCE74\uB370\uBBF8(\uC7A1\uC11C\uD3EC\uD2B8\uB8F8) / \uC0C1\uC0C1\uC637\uC7A5
+      / AI\uBA74\uC811\uC2E4 / \uBD84\uC7A5\uC2E4 / VIP\uC2E4 / \uB2E4\uC6A9\uB3C4\uD640\n\n2\uCE35
+      : \uC785\uD559\uCC98 \uC785\uD559\uACFC / \uC785\uD559\uCC98 \uC785\uD559\uC815\uCC45\uC2E4
+      / \uC804\uC2DC\uD640 / \uB300\uAC15\uB2F9(2\uCE35 ~ 5\uCE35)\n\n3\uCE35 : \uB2E4\uBAA9\uC801\uD640
+      / \uACC4\uB2E8\uAC15\uC758\uC2E4\n\n\uC138\uBBF8\uB098\uC2E4 / \uD1A0\uB860\uD559\uC2B5\uC2E4
+      / \uB2E4\uBAA9\uC801\uD68C\uC758\uC7A5"
+    buildingNumber: 7
+    pictureName: "\uAC00\uC88C_7"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15541
+    longitude: 128.10217
+    buildingName: "\uBC15\uBB3C\uAD00 \uBC0F \uACE0\uBB38\uD5CC\uB3C4\uC11C\uAD00"
+    buildingDescription: "1\uCE35 : \uBC15\uBB3C\uAD00, \uCD9C\uD310\uBD80, \uC9C0\uC564\uC720
+      \uBD81\uCE74\uD398"
+    buildingNumber: 11
+    pictureName: "\uAC00\uC88C_11"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156124
+    longitude: 128.10336
+    buildingName: "GNU\uC5B4\uB9B0\uC774\uC9D1"
+    buildingDescription: "1\uCE35 : \uC5B4\uB9B0\uC774\uC9D1"
+    buildingNumber: 21
+    pictureName: "\uAC00\uC88C_21"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.149742
+    longitude: 128.09949
+    buildingName: "\uB0A8\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 22
+    pictureName: "\uAC00\uC88C_22"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15591
+    longitude: 128.10428
+    buildingName: "\uBD81\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 23
+    pictureName: "\uAC00\uC88C_23"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.151993
+    longitude: 128.09898
+    buildingName: "\uAD50\uC591\uD559\uAD00\xB7\uAD50\uC721\uD601\uC2E0\uCC98"
+    buildingDescription: '-'
+    buildingNumber: 24
+    pictureName: "\uAC00\uC88C_24"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150974
+    longitude: 128.10046
+    buildingName: "\uCC3D\uC5C5\uBCF4\uC721\uC13C\uD130"
+    buildingDescription: '-'
+    buildingNumber: 25
+    pictureName: "\uAC00\uC88C_25"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153214
+    longitude: 128.09467
+    buildingName: "\uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 27
+    pictureName: "\uAC00\uC88C_27"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153835
+    longitude: 128.09541
+    buildingName: "BNIT R&D \uC0B0\uD559\uD611\uB825\uC13C\uD130"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uC2DD\uBB3C\uC0DD\uC7A5\uC2E4 /
+      \uBB38\uC11C\uACE0 / LINC3.0 \uC0AC\uC5C5\uB2E8 \uB3D9\uC544\uB9AC\uC2E4\n\n1\uCE35
+      : \uC0B0\uD559\uD611\uB825\uB2E8\uC7A5\uC2E4 / \uC0B0\uD559\uC5F0\uAD6C\uACFC
+      / \uC0B0\uD559\uC9C0\uC6D0\uACFC / \uC0B0\uD559\uAC10\uC0AC\uC2E4\n\n2\uCE35
+      : \uACF5\uB3D9\uC9C0\uC6D0\uC2DC\uC124(\uC911\uD68C\uC758\uC2E4, \uB300\uD68C\uC758\uC2E4)
+      / \uAE30\uCD08\uACFC\uD559\uC5F0\uAD6C\uC18C / \uACF5\uD559\uC5F0\uAD6C\uC6D0
+      / \uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uC5F0\uAD6C\uC18C / \uC0B0\uD559\uD611\uB825\uC815\uCC45\uC5F0\uAD6C\uC18C
+      / \uC0AC\uD68C\uACFC\uD559\uC5F0\uAD6C\uC6D0 / \uC57D\uD559\uC5F0\uAD6C\uC18C\n\n3\uCE35
+      : \uAE30\uC220\uBE44\uC988\uB2C8\uC2A4\uC13C\uD130 / \uC2A4\uB9C8\uD2B8\uD31C\uC5F0\uAD6C\uC13C\uD130
+      / \uC18C\uD68C\uC758\uC2E4/ \uC0B0\uD559\uC5F0\uD611\uB825\uC120\uB3C4\uB300\uD559\uC721\uC131\uC0AC\uC5C5\uB2E8(LINC
+      3.0)\n\n4\uCE35: \uC57D\uD559\uB300\uD559\n\n5\uCE35: \uC57D\uD559\uB300\uD559
+      \n\n6\uCE35: \uD601\uC2E0\uC5F0\uAD6C\uC2E4 / \uC57D\uD559\uB300\uD559\uAD50\uC218\uC2E4
+      / \uC57D\uD559\uB300\uD559 \uC2E4\uD5D8\uC2E4\n\n7\uCE35: \uAD11\uD654\uD559\uB098\uB178\uC18C\uC7AC\uC804\uBB38
+      \uD575\uC2EC\uC5F0\uAD6C\uC9C0\uC6D0\uC13C\uD130 / \uD601\uC2E0\uC5F0\uAD6C\uC2E4\n\n8\uCE35:
+      \uCF54\uB85C\uB098\uBC14\uC774\uB7EC\uC2A4 \uC5F0\uAD6C\uC13C\uD130 / LINC
+      3.0 \uAC15\uC758\uC2E4(3D \uD504\uB9B0\uD130)"
+    buildingNumber: 28
+    pictureName: "\uAC00\uC88C_28"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154114
+    longitude: 128.0989
+    buildingName: "\uAD6D\uC81C\uC5B4\uD559\uC6D0"
+    buildingDescription: "1\uCE35: Pioneer Auditorium(\uC624\uB514\uD1A0\uB9AC\uC6C0),
+      \uAE30\uC790\uC7AC\uC2E4, \uC6D0\uC7A5\uC2E4, \uC2E4\uC7A5\uC2E4, \uD589\uC815\uC2E4\u2160,
+      \uAC15\uC758\uC2E4\n\n2\uCE35: \uAC15\uC0AC\uC2E4, \uAC15\uC0AC\uD734\uAC8C\uC2E4,
+      \uC77C\uBCF8\uBB38\uD654\uC5F0\uAD6C\uC18C ,\uAC15\uC758\uC2E4\n\n3\uCE35:
+      \uAC15\uC758\uC2E4\n\n4\uCE35: \uAC15\uC758\uC2E4, \uBA40\uD2F0\uBBF8\uB514\uC5B4\uC2E4"
+    buildingNumber: 29
+    pictureName: "\uAC00\uC88C_29"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15447
+    longitude: 128.09828
+    buildingName: "\uCEF4\uD4E8\uD130\uACFC\uD559\uAD00"
+    buildingDescription: "30\uB3D9(\uC790\uC5F0\uACFC\uD559\uB300\uD559)\n\uCEF4\uD4E8\uD130\uACFC\uD559\uBD80,
+      \uD559\uC0DD\uC0C1\uB2F4\uC13C\uD130 \uB4F1\uC774 \uC788\uC2B5\uB2C8\uB2E4.\n1\uCE35:
+      \uD559\uC0DD\uC0C1\uB2F4\uC13C\uD130(STUDENT COUNSELING CENETR)\n2\uCE35: \uC5F4\uB78C\uC2E4\n3\uCE35~4\uCE35:
+      \uCEF4\uD4E8\uD130\uACFC\uD559\uBD80(\uCEF4\uD4E8\uD130\uACFC\uD559\uC804\uACF5)"
+    buildingNumber: 30
+    pictureName: "\uAC00\uC88C_30"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156315
+    longitude: 128.0998
+    buildingName: "\uB0A8\uBA85\uD559\uAD00"
+    buildingDescription: "1\uCE35 : \uAC15\uC758\uC2E4(31-101) / \uC138\uBBF8\uB098\uC2E4(31-104~105)
+      / \uD68C\uC758\uC2E4(31-106) / \uB0A8\uBA85\uC804\uC2DC\uC2E4\n\n2\uCE35 :
+      \uAE30\uB85D\uAD00 / \uAE30\uB85D\uAD00 \uBCF4\uC874\uC11C\uACE0 / \uB0A8\uBA85\uD640\n\n3\uCE35
+      : \uACBD\uB0A8\uBB38\uD654\uC5F0\uAD6C\uC6D0 / \uB0A8\uBA85\uD559\uC5F0\uAD6C\uC18C
+      / \uC804\uD1B5\uBB38\uD654\uCF58\uD150\uCE20\uC13C\uD130 / \uBA85\uC0B0\uBB38\uD654\uC5F0\uAD6C\uC13C\uD130
+      / \uACBD\uB0A8\uBB38\uD654\uC5F0\uAD6C\uC13C\uD130 / \uC778\uAD8C\uC0AC\uD68C\uBC1C\uC804\uC5F0\uAD6C\uC18C
+      / \uC778\uBB38\uD559\uC5F0\uAD6C\uC18C / \uD55C\uBB38\uD559\uACFC \uAD50\uC218\uC5F0\uAD6C\uC2E4"
+    buildingNumber: 31
+    pictureName: "\uAC00\uC88C_31"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15744
+    longitude: 128.09247
+    buildingName: "126\uD559\uC0DD\uAD70\uC0AC\uAD50\uC721\uB2E8"
+    buildingDescription: '-'
+    buildingNumber: 32
+    pictureName: "\uAC00\uC88C_32"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153584
+    longitude: 128.10336
+    buildingName: "\uC608\uC808\uAD50\uC721\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 34
+    pictureName: "\uAC00\uC88C_34"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15277
+    longitude: 128.10393
+    buildingName: "\uC815\uBCF4\uB098\uB214\uD130"
+    buildingDescription: "1\uCE35 : \uC815\uBCF4\uB098\uB214\uD130"
+    buildingNumber: 41
+    pictureName: "\uAC00\uC88C_41"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15217
+    longitude: 128.10294
+    buildingName: "\uC57C\uC678\uACF5\uC5F0\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 42
+    pictureName: "\uAC00\uC88C_42"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15476
+    longitude: 128.10391
+    buildingName: "\uB300\uC6B4\uB3D9\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 43
+    pictureName: "\uAC00\uC88C_43"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150696
+    longitude: 128.09904
+    buildingName: "\uD30C\uC6CC\uD50C\uB79C\uD2B8"
+    buildingDescription: '-'
+    buildingNumber: 44
+    pictureName: "\uAC00\uC88C_44"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15617
+    longitude: 128.1026
+    buildingName: "\uAD50\uC9C1\uC6D0\uD14C\uB2C8\uC2A4\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 49
+    pictureName: "\uAC00\uC88C_49"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150616
+    longitude: 128.09929
+    buildingName: "\uBAA9\uACF5\uC2E4"
+    buildingDescription: "1\uCE35 : \uBAA9\uACF5\uC2E4 / \uC6B4\uC804\uAE30\uC0AC\uB300\uAE30\uC2E4"
+    buildingNumber: 58
+    pictureName: "\uAC00\uC88C_58"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.158375
+    longitude: 128.09953
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uAD00\uB9AC\uB3D9"
+    buildingDescription: '-'
+    buildingNumber: 61
+    pictureName: "\uAC00\uC88C_61"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.157413
+    longitude: 128.10023
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C3BTL\uC0DD\uD65C\uAD00(1\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 62
+    pictureName: "\uAC00\uC88C_62"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15764
+    longitude: 128.10004
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C3BTL\uC0DD\uD65C\uAD00(2\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 63
+    pictureName: "\uAC00\uC88C_63"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.157875
+    longitude: 128.09985
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C3BTL\uC0DD\uD65C\uAD00(3\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 64
+    pictureName: "\uAC00\uC88C_64"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.157997
+    longitude: 128.10056
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C3BTL\uC0DD\uD65C\uAD00(4\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 65
+    pictureName: "\uAC00\uC88C_65"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.158443
+    longitude: 128.09886
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00-5\uB3D9"
+    buildingDescription: '-'
+    buildingNumber: 66
+    pictureName: "\uAC00\uC88C_66"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15734
+    longitude: 128.10146
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 6, 7\uB3D9"
+    buildingDescription: '-'
+    buildingNumber: 67
+    pictureName: "\uAC00\uC88C_67"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15769
+    longitude: 128.09909
+    buildingName: "\uAC8C\uC2A4\uD2B8\uD558\uC6B0\uC2A4"
+    buildingDescription: '-'
+    buildingNumber: 68
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.157833
+    longitude: 128.10097
+    buildingName: "\uC601\uC5B4\uCEA0\uD504\uAC15\uC758\uB3D9"
+    buildingDescription: "1\uCE35: \uC678\uAD6D\uC5B4 \uC0C1\uD669\uCCB4\uD5D8\uAD00\n\n2\uCE35:
+      \uD589\uC815\uC2E4, \uAC15\uC0AC\uC2E4(EZ\uC601\uC5B4), \uC790\uB8CC\uC2E4\n\n3\uCE35~6\uCE35:
+      \uAC15\uC758\uC2E4"
+    buildingNumber: 69
+    pictureName: "\uAC00\uC88C_69"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.158054
+    longitude: 128.0988
+    buildingName: "LG\uAC1C\uCC99\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 70
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156635
+    longitude: 128.1013
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C1BTL\uC0DD\uD65C\uAD00(8\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 71
+    pictureName: "\uAC00\uC88C_71"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156643
+    longitude: 128.10176
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C1BTL\uC0DD\uD65C\uAD00(9\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 72
+    pictureName: "\uAC00\uC88C_72"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156704
+    longitude: 128.10075
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C2BTL\uC0DD\uD65C\uAD00(10\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 73
+    pictureName: "\uAC00\uC88C_73"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156906
+    longitude: 128.10037
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00 - \uC81C2BTL\uC0DD\uD65C\uAD00(11\uB3D9)"
+    buildingDescription: '-'
+    buildingNumber: 74
+    pictureName: "\uAC00\uC88C_74"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.158226
+    longitude: 128.0977
+    buildingName: "\uBD80\uC124\uC911\uD559\uAD50"
+    buildingDescription: 
+    buildingNumber: 81
+    pictureName: "\uAC00\uC88C_81"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155205
+    longitude: 128.10028
+    buildingName: "\uC778\uBB381\uD638\uAD00"
+    buildingDescription: "\u2022 101\uB3D9 \uC778\uBB38\uB300\uD559\n1\uCE35 : \uC601\uC5B4\uC601\uBB38\uD559\uBD80
+      \uC601\uC5B4\uC601\uBB38\uD559\uC804\uACF5 \uC0AC\uBB34\uC2E4 / \uAD6D\uC5B4\uAD6D\uBB38\uD559\uACFC
+      \uC0AC\uBB34\uC2E4 / \uC0AC\uD559\uACFC \uC0AC\uBB34\uC2E4\n2\uCE35 : \uC778\uBB38\uB300\uD559
+      \uD589\uC815\uC2E4 / \uD55C\uBB38\uD559\uACFC \uC0AC\uBB34\uC2E4\n3\uCE35 :
+      \uB7EC\uC2DC\uC544\uD559\uACFC \uC0AC\uBB34\uC2E4 / \uBD88\uC5B4\uBD88\uBB38\uD559\uACFC
+      \uC0AC\uBB34\uC2E4 / \uBB38\uD654\uCF58\uD150\uCE20\uD559 \uC0AC\uBB34\uC2E4\n4\uCE35
+      : \uB3C5\uC5B4\uB3C5\uBB38\uD559\uACFC \uC0AC\uBB34\uC2E4 / \uC911\uC5B4\uC911\uBB38\uD559\uACFC
+      \uC0AC\uBB34\uC2E4 / \uCCA0\uD559\uACFC \uC0AC\uBB34\uC2E4"
+    buildingNumber: 101
+    pictureName: "\uAC00\uC88C_101"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155064
+    longitude: 128.09981
+    buildingName: "\uC778\uBB382\uD638\uAD00"
+    buildingDescription: "\u2022 102\uB3D9(\uC778\uBB38\uB300\uD559)\n\n1\uCE35 :
+      \uBBFC\uC18D\uBB34\uC6A9\uD559\uACFC \uC0AC\uBB34\uC2E4"
+    buildingNumber: 102
+    pictureName: "\uAC00\uC88C_102"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154697
+    longitude: 128.10034
+    buildingName: "\uC0AC\uD68C\uACFC\uD559\uAD00"
+    buildingDescription: "\u2022 151\uB3D9(\uC0AC\uD68C\uACFC\uD559\uB300\uD559)\n\n1\uCE35
+      : \uC0AC\uD68C\uACFC\uD559\uB300\uD559\uD589\uC815\uC2E4(\uD589\uC815\uB300\uD559\uC6D0
+      \uC0AC\uBB34\uC2E4) / \uACBD\uC81C\uD559\uBD80 \uC0AC\uBB34\uC2E4 / \uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158\uD559\uACFC
+      \uC0AC\uBB34\uC2E4 / \uC0AC\uD68C\uBCF5\uC9C0\uD559\uBD80 \uC0AC\uBB34\uC2E4
+      / \uC0AC\uD68C\uD559\uACFC \uC0AC\uBB34\uC2E4 / \uC2EC\uB9AC\uD559\uACFC \uC0AC\uBB34\uC2E4\n\n2\uCE35
+      : \uC815\uCE58\uC678\uAD50\uD559\uACFC \uC0AC\uBB34\uC2E4 /\uD589\uC815\uD559\uACFC
+      \uC0AC\uBB34\uC2E4"
+    buildingNumber: 151
+    pictureName: "\uAC00\uC88C_151"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15395
+    longitude: 128.09972
+    buildingName: "\uACBD\uC601\uD559\uAD00"
+    buildingDescription: "\u2022 201\uB3D9(\uACBD\uC601\uB300\uD559)\n\n\uACBD\uC601\uB300\uD559\uD589\uC815\uC2E4
+      / \uACBD\uC601\uD559\uBD80 / \uACBD\uC601\uC815\uBCF4\uD559\uACFC / \uAD6D\uC81C\uD1B5\uC0C1\uD559\uBD80
+      / \uD68C\uACC4\uC138\uBB34\uD559\uBD80 / \uC0B0\uC5C5\uACBD\uC601\uD559\uACFC"
+    buildingNumber: 201
+    pictureName: "\uAC00\uC88C_201"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15439
+    longitude: 128.09988
+    buildingName: "\uBC95\uD559\uAD00"
+    buildingDescription: "\u2022 251\uB3D9(\uBC95\uACFC\uB300\uD559)\n\uBC95\uD559\uACFC"
+    buildingNumber: 251
+    pictureName: "\uAC00\uC88C_251"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154236
+    longitude: 128.10062
+    buildingName: "\uB300\uACBD\uD559\uC220\uAD00"
+    buildingDescription: "\u2022 252\uB3D9(\uBC95\uACFC\uB300\uD559)\n\n\uBC95\uACFC\uB300\uD559\uD589\uC815\uC2E4
+      / \uBC95\uD559\uB3C4\uC11C\uAD00"
+    buildingNumber: 252
+    pictureName: "\uAC00\uC88C_252"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154423
+    longitude: 128.09735
+    buildingName: "\uAD50\uC7211\uD638\uAD00"
+    buildingDescription: "1\uCE35 : \uAD6D\uC5B4\uBB38\uD654\uC6D0 / \uC911\uB4F1\uAD50\uC6D0\uC5F0\uAD6C\uC13C\uD130
+      / \uAD50\uC721\uC5F0\uAD6C\uC6D0 / \uBBF8\uB798\uAD50\uC721\uC13C\uD130\n\n2\uCE35
+      : \uD589\uC815\uC2E4 / \uC218\uD559\uAD50\uC721\uACFC\n\n3\uCE35 : \uC601\uC5B4\uAD50\uC721\uACFC
+      / \uC77C\uC5B4\uAD50\uC721\uACFC\n\n4\uCE35 : \uAD50\uC721\uD559\uACFC"
+    buildingNumber: 301
+    pictureName: "\uAC00\uC88C_301"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15483
+    longitude: 128.09746
+    buildingName: "\uAD50\uC7212\uD638\uAD00"
+    buildingDescription: "1\uCE35 : \uC5F4\uB78C\uC2E4 / \uC218\uC5C5\uD589\uB3D9\uBD84\uC11D\uC2E4"
+    buildingNumber: 302
+    pictureName: "\uAC00\uC88C_302"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155277
+    longitude: 128.09933
+    buildingName: "\uAD50\uC721\uBB38\uD654\uC13C\uD130\xB7\uD3C9\uC0DD\uAD50\uC721\uC6D0"
+    buildingDescription: "1\uCE35 : \uD559\uC0DD\uC2DD\uB2F9, COOPSKET \uAD50\uC721\uBB38\uD654\uC810&\uBC14\uB9AC\uC2A4\uD0C0,
+      \uCCB4\uC721\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4\n\n2\uCE35 : \uAD50\uC9C1\uC6D0\uC2DD\uB2F9,
+      \uCCB4\uC721\uAD50\uC721\uACFC \uAD50\uC218\uC5F0\uAD6C\uC2E4\n\n3\uCE35 :
+      \uD3C9\uC0DD\uAD50\uC721\uC6D0\n\n4\uCE35 : \uAD6D\uC5B4\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      \uBC0F \uAD50\uC218\uC5F0\uAD6C\uC2E4\n\n5\uCE35 : \uC720\uC544\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      \uBC0F \uAD50\uC218\uC5F0\uAD6C\uC2E4\n\n6\uCE35 : \uC724\uB9AC\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      \uBC0F \uAD50\uC218\uC5F0\uAD6C\uC2E4\n\n7\uCE35 : \uC77C\uBC18\uC0AC\uD68C\uAD50\uC721\uACFC/\uC9C0\uB9AC\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      \uBC0F \uAD50\uC218\uC5F0\uAD6C\uC2E4\n\n8\uCE35 : \uC5ED\uC0AC\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      \uBC0F \uAD50\uC218\uC5F0\uAD6C\uC2E4"
+    buildingNumber: 303
+    pictureName: "\uAC00\uC88C_303"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15602
+    longitude: 128.10121
+    buildingName: "\uC608\uC220\uAD00"
+    buildingDescription: "\uC911\uB4F1\uAD50\uC0AC \uC591\uC131\uC758 \uC694\uB78C!
+      \uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50 \uC0AC\uBC94\uB300\uD559\n\n1\uCE35
+      : \uBBF8\uC220\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4 / \uC74C\uC545\uAD50\uC721\uACFC\uC0AC\uBB34\uC2E4
+      / \uCF58\uC11C\uD2B8\uD640"
+    buildingNumber: 304
+    pictureName: "\uAC00\uC88C_304"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155155
+    longitude: 128.09558
+    buildingName: "\uACFC\uD5591\uD638\uAD00"
+    buildingDescription: "\uC0DD\uBA85\uACFC\uD559\uBD80 / \uBB3C\uB9AC\uD559\uACFC
+      / \uBB3C\uB9AC\uAD50\uC721\uACFC / \uC0DD\uBB3C\uAD50\uC721\uACFC\n\n1\uCE35
+      : \uBB3C\uB9AC\uD559\uACFC \n\n2\uCE35 : \uC0DD\uBB3C\uAD50\uC721\uACFC / \uBB3C\uB9AC\uAD50\uC721\uACFC\n\n4\uCE35
+      : \uC0DD\uBA85\uACFC\uD559\uBD80"
+    buildingNumber: 351
+    pictureName: "\uAC00\uC88C_351"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155415
+    longitude: 128.09642
+    buildingName: "\uACFC\uD5592\uD638\uAD00"
+    buildingDescription: "\uC790\uC5F0\uACFC\uD559\uB300\uD559\uD589\uC815\uC2E4
+      / \uD654\uD559\uACFC / \uD654\uD559\uAD50\uC721\uACFC, \uACFC\uD559\uC601\uC7AC\uAD50\uC721\uC6D0\n\n2\uCE35
+      : \uACFC\uD559\uC601\uC7AC\uAD50\uC721\uC6D0(Center of the Gifted Gyeongsang
+      National University) / \uC790\uC5F0\uACFC\uD559\uB300\uD559 \uD589\uC815\uC2E4\n\n3\uCE35
+      : \uD654\uD559\uAD50\uC721\uACFC\n\n4\uCE35 : \uD654\uD559\uACFC"
+    buildingNumber: 352
+    pictureName: "\uAC00\uC88C_352"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.149807
+    longitude: 128.09917
+    buildingName: "\uACFC\uD5593\uD638\uAD00"
+    buildingDescription: "\uC758\uB958\uD559\uACFC / \uC2DD\uD488\uC601\uC591\uD559\uACFC\n\n1\uCE35
+      : \uC2DD\uD488\uC601\uC591\uD559\uACFC\n\n3\uCE35 : \uC758\uB958\uD559\uACFC"
+    buildingNumber: 353
+    pictureName: "\uAC00\uC88C_353"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15607
+    longitude: 128.09688
+    buildingName: "\uACFC\uD5594\uD638\uAD00"
+    buildingDescription: "\uC815\uBCF4\uD1B5\uACC4\uD559\uACFC / \uC218\uD559\uACFC 
+      / \uC9C0\uC9C8\uACFC\uD559\uACFC / \uC758\uC608\uACFC\n\n1\uCE35 : \uC758\uC608\uACFC\n\n2\uCE35
+      : \uC9C0\uC9C8\uACFC\uD559\uACFC\n\n3\uCE35 : \uC815\uBCF4\uD1B5\uACC4\uD559\uACFC\n\n4\uCE35
+      : \uC218\uD559\uACFC"
+    buildingNumber: 354
+    pictureName: "\uAC00\uC88C_354"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154823
+    longitude: 128.09364
+    buildingName: "\uACF5\uD5591\uD638\uAD00"
+    buildingDescription: "1\uCE35 : \uBE45\uB370\uC774\uD130\uD601\uC2E0\uACF5\uC720\uB300\uD559\uC0AC\uC5C5\uB2E8
+      / \uC0B0\uC5C5\uC2DC\uC2A4\uD15C\uACF5\uD559\uBD80\n\n2\uCE35 : \uACF5\uACFC\uB300\uD559
+      \uD589\uC815\uC2E4 / \uC735\uD569\uACFC\uD559\uAD6C\uC2E4\uB300\uD559\uC6D0
+      / \uD56D\uACF5\uC6B0\uC8FC\uD2B9\uC131\uD654\uB300\uD559\uC6D0 / \uAC74\uCD95\uB3C4\uC2DC\uD1A0\uBAA9\uB300\uD559\uC6D0
+      / \uC2A4\uB9C8\uD2B8\uC778\uB825\uC591\uC131\uC0AC\uC5C5\uB2E8 / \uC0B0\uC5C5\uC2DC\uC2A4\uD15C\uACF5\uD559\uBD80\n\n3~4\uCE35
+      : \uC0B0\uC5C5\uC2DC\uC2A4\uD15C\uACF5\uD559\uBD80"
+    buildingNumber: 401
+    pictureName: "\uAC00\uC88C_401"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15535
+    longitude: 128.09373
+    buildingName: "\uACF5\uD5592\uD638\uAD00"
+    buildingDescription: "\uB098\uB178\uC2E0\uC18C\uC7AC\uACF5\uD559\uBD80(\uAE08\uC18D\uC7AC\uB8CC\uACF5\uD559\uC804\uACF5/\uC138\uB77C\uBBF9\uACF5\uD559\uC804\uACF5)"
+    buildingNumber: 402
+    pictureName: "\uAC00\uC88C_402"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15589
+    longitude: 128.09386
+    buildingName: "\uACF5\uD5593\uD638\uAD00"
+    buildingDescription: "\uAE30\uACC4\uACF5\uD559\uBD80"
+    buildingNumber: 403
+    pictureName: "\uAC00\uC88C_403"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.155758
+    longitude: 128.09483
+    buildingName: "\uACF5\uD5594\uD638\uAD00"
+    buildingDescription: "\uB098\uB178\uC2E0\uC18C\uC7AC\uACF5\uD559\uBD80(\uACE0\uBD84\uC790\uACF5\uD559\uC804\uACF5)"
+    buildingNumber: 404
+    pictureName: "\uAC00\uC88C_404"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15526
+    longitude: 128.09476
+    buildingName: "\uACF5\uD5595\uD638\uAD00"
+    buildingDescription: "\uC804\uAE30\uACF5\uD559\uACFC / \uC804\uC790\uACF5\uD559\uACFC
+      / \uBC18\uB3C4\uCCB4\uACF5\uD559\uACFC / \uC81C\uC5B4\uACC4\uCE21\uACF5\uD559\uACFC"
+    buildingNumber: 405
+    pictureName: "\uAC00\uC88C_405"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154175
+    longitude: 128.09416
+    buildingName: "\uACF5\uD5596\uD638\uAD00"
+    buildingDescription: "\uB3C4\uC2DC\uACF5\uD559\uACFC / \uD1A0\uBAA9\uACF5\uD559\uACFC
+      / \uAC74\uCD95\uD559\uACFC"
+    buildingNumber: 406
+    pictureName: "\uAC00\uC88C_406"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15407
+    longitude: 128.09317
+    buildingName: "\uACF5\uD5597\uD638\uAD00"
+    buildingDescription: "\uD56D\uACF5\uC6B0\uC8FC\uBC0F\uC18C\uD504\uD2B8\uC6E8\uC5B4\uACF5\uD559\uBD80
+      / \uAC74\uCD95\uACF5\uD559\uBD80(\uAC74\uCD95\uACF5\uD559\uC804\uACF5)"
+    buildingNumber: 407
+    pictureName: "\uAC00\uC88C_407"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156322
+    longitude: 128.09479
+    buildingName: "\uBD80\uC18D\uACF5\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 416
+    pictureName: "\uAC00\uC88C_416"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15219
+    longitude: 128.09683
+    buildingName: "\uB18D\uC0DD1\uD638\uAD00"
+    buildingDescription: "451\uB3D9(\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559)-\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559\uD589\uC815\uC2E4"
+    buildingNumber: 451
+    pictureName: "\uAC00\uC88C_451"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15282
+    longitude: 128.09756
+    buildingName: "\uB18D\uC0DD2\uD638\uAD00"
+    buildingDescription: "452\uB3D9 (\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559)\n\uC2DD\uD488\uC790\uC6D0\uACBD\uC81C\uD559\uACFC
+      / \uB18D\uD559\uACFC / \uC2DD\uBB3C\uC758\uD559\uACFC"
+    buildingNumber: 452
+    pictureName: "\uAC00\uC88C_452"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.152096
+    longitude: 128.09726
+    buildingName: "\uB18D\uC0DD3\uD638\uAD00"
+    buildingDescription: "1\uCE35 : \uC2DD\uD488\uACF5\uD559\uBD80\n\n2\uCE35 : \uC2DD\uD488\uACF5\uD559\uBD80\n\n3\uCE35
+      : \uD658\uACBD\uC0DD\uBA85\uD654\uD559\uACFC"
+    buildingNumber: 453
+    pictureName: "\uAC00\uC88C_453"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15144
+    longitude: 128.09685
+    buildingName: "\uB18D\uC0DD4\uD638\uAD00"
+    buildingDescription: "\u2022 454\uB3D9(\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559)\n\uCD95\uC0B0\uACFC\uD559\uBD80
+      / \uB3D9\uBB3C\uC0DD\uBA85\uC735\uD569\uD559\uBD80"
+    buildingNumber: 454
+    pictureName: "\uAC00\uC88C_454"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15135
+    longitude: 128.09756
+    buildingName: "\uB18D\uC0DD5\uD638\uAD00"
+    buildingDescription: "\u2022 455\uB3D9(\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559)\n\uC6D0\uC608\uACFC\uD559\uBD80"
+    buildingNumber: 455
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153076
+    longitude: 128.0958
+    buildingName: "\uB18D\uC0DD6\uD638\uAD00"
+    buildingDescription: "56\uB3D9(\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uB300\uD559)\n\uC0DD\uBB3C\uC0B0\uC5C5\uAE30\uACC4\uACF5\uD559\uACFC
+      / \uC9C0\uC5ED\uC2DC\uC2A4\uD15C\uACF5\uD559\uACFC / \uD658\uACBD\uC7AC\uB8CC\uACFC\uD559\uACFC"
+    buildingNumber: 456
+    pictureName: "\uAC00\uC88C_456"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15208
+    longitude: 128.09593
+    buildingName: "\uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uAD00"
+    buildingDescription: "1\uCE35 : \uACC4\uB2E8\uAC15\uC758\uC2E4(\uB450\uB808\uD640)
+      / \uB204\uB9AC\uD640 / \uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uC5F0\uAD6C\uC6D0
+      \uD1A0\uC591\uBD84\uC11D\uC2E4\n\n2\uCE35 : \uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uC5F0\uAD6C\uC6D0
+      \uC0DD\uBA85\uD658\uACBD\uBD84\uC11D\uC13C\uD130 / \uD559\uAD50\uAE30\uC5C5
+      GAST \uC720\uC804\uC9C4\uB2E8\uC0AC\uC5C5\uBD80 / \uB3D9\uBB3C\uC721\uC885\uD559\uC5F0\uAD6C\uC2E4\n\n3\uCE35
+      : \uD559\uC220\uB9BC\uC0AC\uBB34\uC2E4 / \uC601\uB18D\uC815\uCC29 \uC721\uC131\uC0AC\uC5C5\uB2E8
+      \uC0AC\uBB34\uC2E4 / \uB18D\uC5C5\uACFC\uD559\uAD50\uC721\uC6D0(\uCD5C\uACE0\uB18D\uC5C5\uACBD\uC601\uC790\uACFC\uC815)
+      / \uB18D\uC5C5\uC0DD\uBA85\uACFC\uD559\uC5F0\uAD6C\uC6D0 \uC0DD\uBA85\uD658\uACBD\uBD84\uC11D\uC13C\uD130"
+    buildingNumber: 459
+    pictureName: "\uAC00\uC88C_459"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150703
+    longitude: 128.09802
+    buildingName: "\uB18D\uB300\uC2DD\uB2F9"
+    buildingDescription: "1\uCE35: COOPSKET\uB290\uD2F0\uB9C8\uB8E8\uC810, \uB290\uD2F0\uB9C8\uB8E8
+      \uCE74\uD398"
+    buildingNumber: 500
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15042
+    longitude: 128.09724
+    buildingName: "\uC218\uC7581\uD638\uAD00"
+    buildingDescription: "\uC218\uC758\uACFC\uB300\uD559\uD589\uC815\uC2E4 / \uC218\uC758\uD559\uACFC
+      / \uC218\uC758\uC608\uACFC "
+    buildingNumber: 501
+    pictureName: "\uAC00\uC88C_501"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150772
+    longitude: 128.09676
+    buildingName: "\uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50 \uBD80\uC18D \uB3D9\uBB3C\uC758\uB8CC\uC6D0"
+    buildingDescription: "1\uCE35 : CT\uC2E4 X-RAY\uC2E4, \uC9C4\uB2E8\uCD08\uC74C\uD30C\uAC80\uC0AC\uC2E4,
+      \uC601\uC0C1\uD310\uB3C5\uC2E4, \uD604\uC0C1\uC2E4, \uAC10\uC5FC\uC9C4\uCC30\uC2E4/\uC785\uC6D0\uC2E4,
+      \uBD80\uAC80\uC2E4, \uC548\uB839\uC2E4\n\n2\uCE35 : \uC811\uC218 \uBC0F \uC218\uB0A9\uC2E4,
+      \uCD08\uC9C4\uC2E4, \uC751\uAE09\uCC98\uCE58\uC2E4, \uBCF4\uD638\uC790\uB300\uAE30\uC2E4,
+      \uC9D1\uC911\uCE58\uB8CC\uC2E4, \uC6D0\uBB34\uACFC, \uC57D\uAD6D \uB4F1\n\n3\uCE35
+      : \uC218\uC220\uC2E4, \uB3D9\uBB3C\uD589\uB3D9\uD074\uB9AC\uB2C9, \uC785\uC6D0\uC2E4,
+      \uC6D0\uC7A5\uC2E4, \uC218\uC758\uC784\uC0C1\uB3C4\uC11C\uAD00 \uB4F1"
+    buildingNumber: 505
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.150665
+    longitude: 128.0961
+    buildingName: "\uACBD\uB0A8\uC57C\uC0DD\uB3D9\uBB3C\uC13C\uD130"
+    buildingDescription: "\uACBD\uB0A8\uC57C\uC0DD\uB3D9\uBB3C\uC13C\uD130"
+    buildingNumber: 507
+    pictureName: "\uAC00\uC88C_507"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.156315
+    longitude: 128.09315
+    buildingName: "ICT\uC735\uD569\uC13C\uD130"
+    buildingDescription: "IT \uACF5\uACFC\uB300\uD559\n\n1\uCE35: IT\uACF5\uACFC\uB300\uD559
+      \uD589\uC815\uC2E4, \uBBF8\uB798\uC790\uB3D9\uCC28\uACF5\uD559\uACFC\n\n2\uCE35
+      : \uBBF8\uB798\uC790\uB3D9\uCC28\uACF5\uD559\uACFC\n\n3\uCE35 : AI\uC815\uBCF4\uACF5\uD559\uACFC\n\n4\uCE35~7\uCE35
+      : \uCEF4\uD4E8\uD130\uACF5\uD559\uACFC\n\n8\uCE35~9\uCE35: \uC18C\uD504\uD2B8\uC6E8\uC5B4\uACF5\uD559\uACFC"
+    buildingNumber: 601
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.152477
+    longitude: 128.10434
+    buildingName: "\uC815\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 21-1
+    pictureName: "\uAC00\uC88C_21-1"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153236
+    longitude: 128.09763
+    buildingName: "\uD559\uC0DD\uD68C\uAD00 \uBCF5\uC9C0\uB3D9"
+    buildingDescription: "\uD559\uC0DD\uB4E4\uC744 \uC704\uD55C \uD3B8\uC758\uC2DC\uC124\uACFC
+      \uD559\uC0DD\uAE30\uAD6C\uAC00 \uC788\uC2B5\uB2C8\uB2E4.\n\n1\uCE35 : \uBB38\uAD6C/\uC7A1\uD654\uB9E4\uC7A5,
+      \uBCF5\uD569\uB9E4\uC7A5, \uD734\uB300\uD3F0 \uB9E4\uC7A5, \uBCF5\uC0AC\uC2E4,
+      \uD608\uC561\uC6D0\n\n2\uCE35 : \uC6B0\uCCB4\uAD6D, \uBCF4\uAC74\uC18C, \uAD6C\uB0B4\uC11C\uC810\n\n3\uCE35
+      : \uCEF4\uD4E8\uD130\uB9E4\uC7A5, \uC548\uACBD\uC810, \uC774\uC6A9\uC6D0, \uC5EC\uD589\uC0AC,
+      \uC9C4\uC8FC\uBCF5\uBB34\uAD00\uB9AC(\uBCD1\uBB34\uC0C1\uB2F4)\uC13C\uD130"
+    buildingNumber: 3-1
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15461
+    longitude: 128.10289
+    buildingName: "\uAC00\uC88C\uB18D\uAD6C\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uAC00\uC88C\uB18D\uAD6C\uC7A5"
+    pictureName: "\uAC00\uC88C_\uAC00\uC88C\uB18D\uAD6C\uC7A5"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.152924
+    longitude: 128.10147
+    buildingName: "\uAC1C\uCC99\uD0D1"
+    buildingDescription: "\uAC1C\uCC99\uD0D1, \uBD84\uC218\uB300, \uC5F4\uC8FC"
+    buildingNumber: "\uAC1C\uCC99\uD0D1"
+    pictureName: "\uAC00\uC88C_\uAC1C\uCC99\uD0D1"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.15146
+    longitude: 128.10085
+    buildingName: "\uB0A8\uBD80\uC6B4\uB3D9\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uB0A8\uBD80\uC6B4\uB3D9\uC7A5"
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.153366
+    longitude: 128.09831
+    buildingName: "\uBBFC\uC8FC\uAD11\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uBBFC\uC8FC\uAD11\uC7A5"
+    pictureName: "\uAC00\uC88C_\uBBFC\uC8FC\uAD11\uC7A5"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.154076
+    longitude: 128.1028
+    buildingName: "\uD559\uC0DD\uD14C\uB2C8\uC2A4\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uD559\uC0DD\uD14C\uB2C8\uC2A4\uC7A5"
+    pictureName: "\uAC00\uC88C_\uAE30\uBCF8"
+    campusName: "\uAC00\uC88C"
+  - latitude: 35.17911
+    longitude: 128.09483
+    buildingName: "\uC815\uBB38"
+    buildingDescription: '-'
+    buildingNumber: "\uC815\uBB38"
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180466
+    longitude: 128.09131
+    buildingName: "\uD6C4\uBB38"
+    buildingDescription: '-'
+    buildingNumber: "\uD6C4\uBB38"
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.181976
+    longitude: 128.0927
+    buildingName: "\uCE60\uC554\uD14C\uB2C8\uC2A4\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uCE60\uC554\uD14C\uB2C8\uC2A4\uC7A5"
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.181393
+    longitude: 128.09286
+    buildingName: "\uCE60\uC554\uC6B4\uB3D9\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: "\uCE60\uC554\uC6B4\uB3D9\uC7A5"
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179688
+    longitude: 128.09557
+    buildingName: "100\uC8FC\uB144 \uAE30\uB150\uAD00"
+    buildingDescription: "1\uCE35 : \uC9C4\uB18D\uD640(\uB2E4\uBAA9\uC801\uAC15\uB2F9)
+      / \uC544\uD2B8\uD640(\uC18C\uADF9\uC7A5) / \uAD00\uB9AC\uC0AC\uBB34\uC2E4\n2\uCE35
+      : \uC5ED\uC0AC\uAD00 / \uC804\uC2DC\uC2E4(\uAC24\uB7EC\uB9AC)\n3\uCE35 : \uACF5\uC6A9\uAC15\uC758\uC2E4\n4\uCE35
+      : \uC815\uBCF4\uC804\uC0B0\uCC98 \uCE60\uC554\uC0AC\uBB34\uC2E4 / \uC911\uD615\uAC15\uC758\uC2E4\n5\uCE35
+      : \uD14D\uC2A4\uD0C0\uC77C\uB514\uC790\uC778\uD559\uACFC\n6\uCE35 : \uAC74\uCD95\uD559\uACFC
+      / \uD14D\uC2A4\uD0C0\uC77C\uB514\uC790\uC778\uD559\uACFC\n7\uCE35 : \uAC74\uCD95\uD559\uACFC\n8\uCE35
+      : \uC601\uC5B4\uD559\uACFC\n9\uCE35 : \uC544\uB3D9\uAC00\uC871\uD559\uACFC\n10\uCE35
+      : \uAD6D\uC81C\uAD50\uB958\uC6D0 / \uACBD\uB0A8\uAD6D\uC81C\uAC1C\uBC1C\uD611\uB825\uC13C\uD130\n11\uCE35
+      : Study Room / \uACE0\uC2DC\uC6D0 / \uC5F0\uAD6C\uC2E4\n12\uCE35 : \uC0AC\uD68C\uBCF5\uC9C0\uD559\uACFC
+      / \uC5F0\uAD6C\uC2E4\n13\uCE35 : \uACBD\uC81C\uD559\uACFC\n14\uCE35 : \uC138\uBBF8\uB098\uC2E4
+      / \uD68C\uC758\uC2E4\n15\uCE35 : \uC2A4\uCE74\uC774\uB77C\uC6B4\uC9C0"
+    buildingNumber: 1
+    pictureName: "\uCE60\uC554_1"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180233
+    longitude: 128.09518
+    buildingName: "\uD559\uC0DD\uD68C\uAD00, \uC885\uC2E4\uAD00(\uD3C9\uC0DD\uAD50\uC721\uC6D0)"
+    buildingDescription: "1\uCE35: \uC0DD\uD65C\uAD00 \uC2DD\uB2F9, \uD3B8\uC758\uC810,
+      \uBB38\uAD6C/\uC7A1\uD654/\uC2A4\uD3EC\uCE20\uC6A9\uD488\uC810\n2\uCE35: \uAD50\uC9C1\uC6D0\uC2DD\uB2F9,
+      \uBCF5\uC0AC\uC810"
+    buildingNumber: 2
+    pictureName: "\uCE60\uC554_2"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180767
+    longitude: 128.09555
+    buildingName: "\uC790\uC5F0\uACFC\uD559\uC2E4\uD5D8\uB3D9"
+    buildingDescription: '-'
+    buildingNumber: 3
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180775
+    longitude: 128.0948
+    buildingName: "\uCE60\uC554\uB3C4\uC11C\uAD00"
+    buildingDescription: "1\uCE35 : \uB300\uCD9C\uBC18\uB0A9\xB7\uC548\uB0B4 \uB370\uC2A4\uD06C/\uBCF5\uD569\uBB38\uD654\uACF5\uAC04/\uC5F4\uB9B0\uC5F4\uB78C\uC2E4/\uD504\uB9B0\uD130\uCF54\uB108/\uC9D1\uC911\uC5F4\uB78C\uC2E4/\uCE74\uD398\uD14C\uB9AC\uC544(\uBE14\uB8E8\uD3EC\uD2B8)\n2\uCE35
+      : \uC0AC\uBB34\uC2E4, \uC601\uC0C1\uC138\uBBF8\uB098\uC2E4, \uB514\uC9C0\uD138\uC790\uB8CC\uC2E4,
+      \uD504\uB9B0\uD130\uCF54\uB108, \uAC1C\uC778\uD559\uC2B5\uC2E4, \uB2E8\uCCB4\uD559\uC2B5\uC2E4\n3\uCE35
+      : \uC778\uBB38\xB7\uC0AC\uD68C\uACFC\uD559 \uC790\uB8CC\uC2E4/\uD558\uB298\uB9C8\uB8E8/\uCC3D\uC758\uD559\uC2B5\uC2E4\n4\uCE35
+      : \uC790\uC5F0\uACFC\uD559 \uC790\uB8CC\uC2E4/\uB3C5\uC11C\uC778\uC99D\uCF54\uB108/\uBCF4\uC874\uC790\uB8CC\uC2E4"
+    buildingNumber: 4
+    pictureName: "\uCE60\uC554_4"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.181263
+    longitude: 128.09537
+    buildingName: "\uC0DD\uBA85\uACFC\uD559 2\uD638\uAD00"
+    buildingDescription: "5\uB3D9(\uC0DD\uBA85\uACFC\uD559\uBD80)\n\uC0B0\uB9BC\uC790\uC6D0\uD559\uACFC
+      / \uC2DD\uD488\uACFC\uD559\uBD80 / \uC6D0\uC608\uACFC\uD559\uACFC / \uC81C\uC57D\uACF5\uD559\uACFC"
+    buildingNumber: 5
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18187
+    longitude: 128.09547
+    buildingName: "\uBC15\uBB3C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 6
+    pictureName: "\uCE60\uC554_6"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.181767
+    longitude: 128.09491
+    buildingName: "\uC0C1\uACBD1\uD638\uAD00"
+    buildingDescription: "7\uB3D9(\uC0C1\uACBD\uB300\uD559)\n\uC2A4\uB9C8\uD2B8\uC720\uD1B5\uBB3C\uB958\uD559\uACFC"
+    buildingNumber: 7
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.181618
+    longitude: 128.09451
+    buildingName: "\uC0C1\uACBD2\uD638\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 8
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.182
+    longitude: 128.09491
+    buildingName: "\uAD50\uC591\uD559\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 9
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.182327
+    longitude: 128.09525
+    buildingName: "\uCCAD\uB2F4\uAD00(\uD559\uAD70\uB2E8)"
+    buildingDescription: "10\uB3D9(\uAD6D\uC81C\uD1B5\uC0C1\uD559\uBD80)\n\uAD6D\uC81C\uD1B5\uC0C1\uD559\uBD80"
+    buildingNumber: 10
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.182
+    longitude: 128.09425
+    buildingName: "\uC790\uC5F0\uACFC\uD559 1\uD638\uAD00"
+    buildingDescription: "11\uB3D9\n\uACBD\uC601\uD559\uBD80 / \uD68C\uACC4\uD559\uACFC
+      / \uAC04\uD638\uD559\uACFC"
+    buildingNumber: 11
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18265
+    longitude: 128.09491
+    buildingName: "\uC81C3\uC0DD\uD65C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 12
+    pictureName: "\uCE60\uC554_12"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18227
+    longitude: 128.09396
+    buildingName: "\uC81C2\uC0DD\uD65C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 13
+    pictureName: "\uCE60\uC554_13"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.182457
+    longitude: 128.0937
+    buildingName: "\uC81C1\uC0DD\uD65C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 14
+    pictureName: "\uCE60\uC554_14"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18096
+    longitude: 128.09395
+    buildingName: "\uAD6C)\uBCF8\uAD00"
+    buildingDescription: "1\uCE35: \uD559\uC0AC\uC9C0\uC6D0\uACFC/\uB300\uD559\uC6D0\uD589\uC815\uC2E4,
+      \uBB38\uC11C\uCDE8\uAE09\uC18C, \uC2A4\uB9C8\uD2B8\uC6CC\uD06C\uC2A4\uD14C\uC774\uC158,
+      \uC2E0\uD611, \uC8FC\uCC28\uAD00\uB9AC\uC2E4 \uB4F1\n2\uCE35: CAP\uC2E4, \uC9C1\uC6D0\uAD50\uC721\uD559\uC2B5\uC2E4,
+      \uAC15\uC758\uC2E4\n3\uCE35: \uAC15\uC758\uC2E4, \uC911\uC810\uAD50\uC721\uC5F0\uAD6C\uC2E4
+      \uB4F1"
+    buildingNumber: 15
+    pictureName: "\uCE60\uC554_15"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180798
+    longitude: 128.09322
+    buildingName: "\uB300\uD559\uBCF8\uBD80"
+    buildingDescription: "1\uCE35 : \uD559\uC0AC\uC9C0\uC6D0\uACFC / \uC0B0\uD559\uD611\uB825\uB2E8\uBD84\uB2E8
+      / \uB300\uD559\uC77C\uC790\uB9AC\uC13C\uD130 / \uBB38\uC11C\uCDE8\uAE09\uC18C
+      \uC8FC\uCC28\uAD00\uB9AC\uC2E4 / \uC0C1\uB2F4\uC2E4 / \uB2F9\uC9C1\uC2E4\n2\uCE35
+      : \uB300\uAC15\uB2F9\n3\uCE35 : \uACF5\uC870\uC2E4\n4\uCE35: \uC7AC\uC815\uC9C0\uC6D0\uC0AC\uC5C5\uCD94\uC9C4\uB2E8\n5\uCE35:
+      \uCD1D\uC7A5\uC2E4 / \uC5F0\uAD6C\uBD80\uCD1D\uC7A5\uC2E4 / \uCE60\uC554\uBD80\uCD1D\uC7A5\uC2E4
+      / \uAE30\uD68D\uCC98\uC7A5\uC2E4 / \uC0AC\uBB34\uAD6D\uC7A5\uC2E4\n6\uCE35:
+      \uB300\uC678\uD611\uB825\uACFC / \uD64D\uBCF4\uC2E4 / \uAE30\uD68D\uD3C9\uAC00\uACFC\n7\uCE35:
+      \uCD1D\uBB34\uACFC / \uC7AC\uBB34\uACFC / \uC608\uBE44\uAD70\uC5F0\uB300 /
+      \uACE0\uCDA9\uC0C1\uB2F4\uC2E4 / \uC18C\uD68C\uC758\uC2E4\n8\uCE35: \uC2DC\uC124\uACFC
+      / \uC911\uD68C\uC758\uC2E4 / \uBBF8\uB514\uC5B4\uC2A4\uD29C\uB514\uC624 / \uC9C0\uC18D\uAC00\uB2A5\uBC1C\uC804\uC13C\uD130\n9\uCE35:
+      \uB300\uD68C\uC758\uC2E4"
+    buildingNumber: 16
+    pictureName: "\uCE60\uC554_16"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18049
+    longitude: 128.09262
+    buildingName: "\uCCB4\uC721\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 17
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180298
+    longitude: 128.09196
+    buildingName: "\uACF5\uD559 1\uD638\uAD00"
+    buildingDescription: "1\uCE35: \uC735\uD569\uC804\uC790\uACF5\uD559\uBD80, \uCEF4\uD4E8\uD130\uACFC\uD559\uBD80(\uCEF4\uD4E8\uD130\uC18C\uD504\uD2B8\uC6E8\uC5B4\uC804\uACF5),
+      \uBA40\uD2F0\uBBF8\uB514\uC5B4\uC2E4\n2\uCE35: \uCEF4\uD4E8\uD130\uACFC\uD559\uBD80(\uCEF4\uD4E8\uD130\uC18C\uD504\uD2B8\uC6E8\uC5B4\uC804\uACF5)\n3\uCE35:
+      \uC735\uD569\uC804\uC790\uACF5\uD559\uBD80\n4\uCE35: \uC735\uD569\uC804\uC790\uACF5\uD559\uBD80,
+      \uCEF4\uD4E8\uD130\uACFC\uD559\uBD80(\uCEF4\uD4E8\uD130\uC18C\uD504\uD2B8\uC6E8\uC5B4\uC804\uACF5)"
+    buildingNumber: 18
+    pictureName: "\uCE60\uC554_18"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.18012
+    longitude: 128.09163
+    buildingName: "\uD30C\uC6CC\uD50C\uB79C\uD2B8"
+    buildingDescription: '-'
+    buildingNumber: 19
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179707
+    longitude: 128.09201
+    buildingName: "\uACF5\uD559 2\uD638\uAD00"
+    buildingDescription: "1\uCE35 : \uBBF8\uB798\uC790\uB3D9\uCC28\uACF5\uD559\uACFC\n2\uCE35,
+      3\uCE35 : \uAE30\uACC4\uC18C\uC7AC\uC735\uD569\uACF5\uD559\uBD80\n4\uCE35,
+      5\uCE35 : \uBA54\uCE74\uD2B8\uB85C\uB2C9\uC2A4\uACF5\uD559\uBD80"
+    buildingNumber: 20
+    pictureName: "\uCE60\uC554_20"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.180325
+    longitude: 128.09343
+    buildingName: "\uC0DD\uBA85\uACFC\uD559 1\uD638\uAD00"
+    buildingDescription: "21\uB3D9(\uC0DD\uBA85\uACFC\uD559\uBD80)\n\uC2A4\uB9C8\uD2B8\uB18D\uC0B0\uC5C5\uD559\uACFC
+      / \uD56D\uB178\uD654\uC2E0\uC18C\uC7AC\uACFC\uD559\uACFC / \uB3D9\uBB3C\uC0DD\uBA85\uACFC\uD559\uACFC
+      / \uB3D9\uBB3C\uC18C\uC7AC\uACF5\uD559\uACFC"
+    buildingNumber: 21
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179924
+    longitude: 128.09372
+    buildingName: "\uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00"
+    buildingDescription: "1\uCE35 : 3D\uD504\uB9B0\uD305\uACBD\uB0A8\uC13C\uD130(\uD589\uC815\uC2E4/\uAE30\uAE30\uC2E4)
+      / \uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00(\uC2E4\uC2B5\uC2E4)\n2\uCE35 :
+      \uD658\uACBD\uCE21\uC815\uAC80\uC0AC\uC13C\uD130(\uD589\uC815\uC2E4/\uAE30\uAE30\uC2E4)
+      / \uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00(\uC2E4\uC2B5\uC2E4)\n3\uCE35 :
+      \uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00(\uD589\uC815\uC2E4/\uAE30\uAE30\uC2E4)\n4\uCE35
+      : \uACF5\uB3D9\uC2E4\uD5D8\uC2E4\uC2B5\uAD00(\uAE30\uAE30\uC2E4)"
+    buildingNumber: 22
+    pictureName: "\uCE60\uC554_22"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179745
+    longitude: 128.09291
+    buildingName: "\uACF5\uD559 3\uD638\uAD00"
+    buildingDescription: "23\uB3D9(\uACF5\uACFC\uB300\uD559)\n\uD658\uACBD\uACF5\uD559\uACFC
+      / \uC778\uD14C\uB9AC\uC5B4\uC7AC\uB8CC\uACF5\uD559\uACFC / \uD734\uBA3C\uD5EC\uC2A4\uCF00\uC5B4\uD559\uACFC
+      / \uAC74\uC124\uD658\uACBD\uACF5\uACFC\uB300\uD559\uD589\uC815\uC2E4 / \uC735\uD569\uAE30\uC220\uACF5\uACFC\uB300\uD559\uD589\uC815\uC2E4"
+    buildingNumber: 23
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.17944
+    longitude: 128.09215
+    buildingName: "\uACF5\uD559 4\uD638\uAD00"
+    buildingDescription: "24\uB3D9(\uACF5\uACFC\uB300\uD559)\n\uAC74\uC124\uC2DC\uC2A4\uD15C\uACF5\uD559\uACFC
+      / \uC870\uACBD\uD559\uACFC / \uAC74\uCD95\uACF5\uD559\uACFC"
+    buildingNumber: 24
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.17926
+    longitude: 128.0921
+    buildingName: "\uC790\uB3D9\uCC28\uC2E4\uC2B5\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 25
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179096
+    longitude: 128.09218
+    buildingName: "\uC778\uD14C\uB9AC\uC5B4\uC2E4\uC2B5\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 26
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179363
+    longitude: 128.09319
+    buildingName: "\uACF5\uD5594\uD638\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 27
+    pictureName: "\uCE60\uC554_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.179523
+    longitude: 128.09709
+    buildingName: "\uC0B0\uD559\uD611\uB825\uAD00, \uAD50\uC721\uD559\uC2B5\uAD00
+      \uBC0F \uD3C9\uC0DD\uAD50\uC721\uC6D0"
+    buildingDescription: "\uC9C0\uD5581\uCE35: \uCC3D\uC5C5\uBCF4\uC721\uC13C\uD130
+      \uACF5\uC7A5 \uB4F1\n1\uCE35 : \uC804\uC2DC\uC2E4(\uAC24\uB7EC\uB9AC), \uB300\uD68C\uC758\uC2E4\n2\uCE35
+      : \uAC15\uC758\uC2E4, \uCE5C\uD658\uACBD\uB18D\uC0B0\uBB3C\uC778\uC99D\uC13C\uD130,
+      \uB3D9\uBB3C\uC0DD\uBA85\uC0B0\uC5C5\uC13C\uD130, \uC591\uB3C8\uACFC\uD559\uAE30\uC220\uC13C\uD130,
+      \uC18C\uC0C1\uACF5\uC778\uC9C0\uC6D0\uC13C\uD130, \uC911\uC18C\uAE30\uC5C5\uC0B0\uD559\uD611\uB825\uC13C\uD130,
+      \uBCF4\uC721\uAD50\uC0AC\uAD50\uC721\uC6D0, \uCD5C\uACE0\uC601\uB18D\uC790\uAD50\uC721\uC6D0\n3\uCE35
+      : \uC5B4\uB9B0\uC774\uC0DD\uBA85\uACFC\uD559\uAD50\uC721\uC6D0, \uD3C9\uC0DD\uAD50\uC721\uC6D0\n4\uCE35:
+      \uAC8C\uC2A4\uD2B8\uD558\uC6B0\uC2A4 \uB4F1"
+    buildingNumber: 28
+    pictureName: "\uCE60\uC554_28"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.17879
+    longitude: 128.09615
+    buildingName: "\uC81C4\uC0DD\uD65C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 29
+    pictureName: "\uCE60\uC554_29"
+    campusName: "\uCE60\uC554"
+  - latitude: 35.175274
+    longitude: 128.09415
+    buildingName: "\uC758\uD559\uAD00(\uC758\uACFC\uB300\uD559\uBCF8\uAD00)"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uAE30\uACC4\uC2E4\n1\uCE35 : \uD589\uC815\uC2E4
+      / \uD589\uC815\uC2E4\uC7A5\uC2E4 / \uBD80\uD559\uC7A5\uC2E4 / \uD559\uC7A5\uC2E4
+      / \uAD50\uC218\uD68C\uC758\uC2E4 / \uC18C\uD68C\uC758\uC2E4 / \uAD50\uC218\uD68C\uC758\uC2E4
+      / \uC911\uAC1C\uC5F0\uAD6C\uC13C\uD130\n2\uCE35 : \uD574\uBD80\uD559\uAD50\uC2E4
+      / \uBCD1\uB9AC\uD559\uAD50\uC2E4 / \uAC74\uAC15\uACFC\uD559\uC5F0\uAD6C\uC6D0
+      / \uB3D9\uBB38\uD68C\uC0AC\uBB34\uC2E4 / BK21\uAD50\uC721\uC5F0\uAD6C\uB2E8\n3\uCE35
+      : \uC0DD\uB9AC\uD559\uAD50\uC2E4 / \uC0DD\uD654\uD559\uAD50\uC2E4 / \uD5C8\uBE0C\uC2E4
+      / \uC138\uD3EC\uC601\uC0C1\uBD84\uC11D\uC2E4I\n4\uCE35 : \uBBF8\uC0DD\uBB3C\uD559\uAD50\uC2E4
+      / \uC57D\uB9AC\uD559\uAD50\uC2E4 / \uB300\uD559\uC6D0PBL-Hybrid\uAC15\uC758\uC2E4
+      / \uC18C\uADDC\uBAA8\uC138\uBBF8\uB098\uC2E4\n\uC608\uBC29\uD559\uAD50\uC2E4
+      / \uAE30\uC0DD\uCDA9\uD559\uC5F4\uB300\uC758\uD559\uAD50\uC2E4 / SPF\uC2E4\uD5D8\uB3D9\uBB3C\uC2E4\n6\uCE35
+      : SEMI-SPF\uC2E4\uD5D8\uB3D9\uBB3C\uC2E4 / \uACF5\uC870\uC2E4"
+    buildingNumber: 1
+    pictureName: "\uCE60\uC554\uC758\uAC04_1"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.175686
+    longitude: 128.09402
+    buildingName: "\uC758\uD559\uB3C4\uC11C\uAD00"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uB3D9\uC544\uB9AC\uC2E4 / \uB2E4\uBAA9\uC801\uD640
+      / \uCCB4\uB825\uB2E8\uB828\uC2E4\n1\uCE35 :\uC758\uD559\uB3C4\uC11C\uAD00(Medical
+      Library)\n2\uCE35 : \uC758\uC608\uACFC \uAC15\uC758\uC2E4 / \uC774\uC815\uC790\uBA40\uD2F0\uBBF8\uB514\uC5B4
+      \uAC15\uC758\uC2E4 / \uACBD\uC0C1\uB0A8\uB3C4\uAD8C\uC5ED\uD615\uD658\uACBD\uBCF4\uAC74\uC13C\uD130
+      / \uD5C8\uBE0C\uC2E4\n3\uCE35 : \uC81C1\uAC15\uC758\uC2E4 / \uC81C2\uAC15\uC758\uC2E4
+      / \uAE30\uCD08\uC2E4\uC2B5\uC2E4 / MDL"
+    buildingNumber: 2
+    pictureName: "\uCE60\uC554\uC758\uAC04_2"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.176075
+    longitude: 128.0938
+    buildingName: "\uAC1C\uCC99\uC758\uD559\uBCF5\uD569\uAD00"
+    buildingDescription: "\uC9C0\uD5581\uCE35: \uAE30\uACC4\uC2E4 / \uC804\uAE30\uC2E4
+      / \uBC1C\uC804\uAE30\uC2E4 / \uAC10\uC2DC\uC81C\uC5B4\uC2E4\n1\uCE35: \uCEF4\uD4E8\uD130\uC2E4
+      / \uB300\uAC15\uC758\uC2E4 / \uAD00\uB9AC\uC2E4 / \uC6A9\uC5ED\uC6D0 \uD734\uAC8C\uC2E4\n2\uCE35:
+      PBL\uC2E4 / CPX\xB7OSCE\uC2E4 / \uC2DC\uBBAC\uB808\uC774\uC158\uC13C\uD130
+      / \uC0C1\uB2F4\uC2E4 / \uBAA8\uD615\uBCF4\uAD00\uC2E4\n3\uCE35: \uAE30\uCD08\uC2E4\uC2B5\uC2E4
+      / \uD604\uBBF8\uACBD\uC2E4\uC2B5\uC2E4 / \uC900\uBE44\uC2E4 / 1\uD559\uB144
+      \uAC15\uC758\uC2E4 / 2\uD559\uB144 \uAC15\uC758\uC2E4\n4\uCE35: 3\uD559\uB144
+      \uAC15\uC758\uC2E4\xB7\uC815\uB3C5\uC2E4 / 4\uD559\uB144 \uAC15\uC758\uC2E4\xB7\uC815\uB3C5\uC2E4
+      / \uC735\uBCF5\uD569\uB300\uD559\uC6D0 \uAC15\uC758\uC2E4\n5\uCE35: \uBA40\uD2F0\uBBF8\uB514\uC5B4\uD559\uC2B5\uC2E4
+      / \uC2EC\uD3D0\uC18C\uC0DD\uC220\uAD50\uC721\uC2E4 / \uC758\uD559\uAD50\uC721\uC13C\uD130
+      \uC0AC\uBB34\uC2E4\n6\uCE35: \uD559\uC0DD\uC790\uCE58\uC2E4 / \uB3D9\uC544\uB9AC\uC2E4
+      / \uB77D\uCE74\uC2E4"
+    buildingNumber: 3
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17753
+    longitude: 128.09459
+    buildingName: "\uC758\uACFC\uB300\uD559 \uD559\uC2B5\uAD00 \uBC0F \uC784\uC0C1\uAE30\uC220\uC13C\uD130"
+    buildingDescription: "\uC9C0\uD5581\uCE35 : \uBCF4\uC874\uC11C\uACE0\n1\uCE35
+      : \uD574\uBD80\uC2E4\uC2B5\uC2E4 / \uB0A9\uACE8\uB2F9 / \uC0DD\uBA85\uC0AC\uB791\uC2E4
+      / \uC8FC\uCC28\uAD00\uB9AC\uC2E4 / \uBCD1\uC6D0\uCCB4\uC790\uC6D0\uC740\uD589\n2\uCE35
+      : \uC758\uD559\uACFC \uD559\uC2B5\uC2E4 / \uCEF4\uD4E8\uD130\uC2E4 1\n3\uCE35
+      : PBL\uC2E4 / \uC758\uD559\uC2DC\uBBAC\uB808\uC774\uC158\uC13C\uD130 / \uC784\uC0C1\uC2E4\uAE30\uC13C\uD130
+      / \uC758\uD559\uAD50\uC721\uD559\uAD50\uC2E4 / \uCEF4\uD4E8\uD130\uC2E4 2\n4\uCE35:
+      \uD559\uC0DD\uD68C\uC2E4 / \uB0A8, \uB140 \uD734\uAC8C\uC2E4"
+    buildingNumber: 4
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.177242
+    longitude: 128.09319
+    buildingName: "\uD559\uC0DD\uC0DD\uD65C\uAD00(\uD64D\uC9C0\uAD00)"
+    buildingDescription: "5\uB3D9\n\uD559\uC0DD\uC0DD\uD65C\uAD00(\uD64D\uC9C0\uAD00)"
+    buildingNumber: 5
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.176613
+    longitude: 128.0933
+    buildingName: "\uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50\uBCD1\uC6D0 \uC0DD\uD65C\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 6
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.174267
+    longitude: 128.09473
+    buildingName: "\uAC04\uD638\uB300\uD559 \uAD50\uC721\uD559\uC2B5\uAD00"
+    buildingDescription: "\uAC04\uD638\uB300\uD559 \uAD50\uC721\uD559\uC2B5\uAD00\n1\uCE35
+      : \uC678\uC0C1\uC13C\uD130 / VR\uC2DC\uBB3C\uB808\uC774\uC158\uB8F8 / \uAC15\uC758\uC2E4
+      / \uC5F4\uB9B0\uAC15\uC758\uC2E4 / \uC9C0\uC5ED\uC0AC\uD68C\uAC04\uD638\uC2DC\uBBAC\uB808\uC774\uC158\uB8F8
+      / \uAC15\uC0AC\uC5F0\uAD6C\uC2E4\n2\uCE35 : \uAC10\uC5FC\uAD00\uB9AC\uC13C\uD130
+      / \uAC15\uC758\uC2E4 / \uC815\uB3C5\uC2E4 / \uD734\uAC8C\uC2E4\n3\uCE35 : \uAE30\uBCF8\uAC04\uD638\uD559
+      \uC2E4\uC2B5\uC2E4, \uC138\uBBF8\uB098\uC2E4 / \uD575\uC2E4\uAC04\uD638\uC220\uAE30\uC2E4\uC2B5\uC2E4
+      / \uAE30\uCD08\uAC04\uD638\uD559\uC2E4\uC2B5\uC2E4 / \uAE30\uC790\uC7AC\uC900\uBE44\uC2E4
+      1 / \uC131\uC778\uAC04\uD638\uD559\uC2E4\uC2B5\uC2E4\n4\uCE35 : GISEP\uC2E4\uC2AC\uC2E4
+      \uBC0F \uC6B4\uB3D9\uC2E4 / \uAD00\uB9AC\uC2DC\uBBAC\uB808\uC774\uC158\uB8F8
+      / \uC815\uC2E0 \uC2DC\uBBAC\uB808\uC774\uC158\uB8F8 / \uAE30\uC790\uC7AC\uC900\uBE44\uC2E4
+      2 / \uBAA8\uC131\uC2DC\uBBAC\uB808\uC774\uC158\uB8F8 \uBC0F \uB514\uBE0C\uB9AC\uD551\uB8F8
+      / \uC544\uB3D9\uC2DC\uBBAC\uB808\uC774\uC158\uB8F8 \uBC0F \uB514\uBE0C\uB9AC\uD551\uB8F8
+      / \uC131\uC778\uC2DC\uBBAC\uB808\uC774\uC158\uB8F8 \uBC0F \uB514\uBE0C\uB9AC\uD551\uB8F8
+      / \uB178\uC778\uAC74\uAC15\uC5F0\uAD6C\uC13C\uD130"
+    buildingNumber: 7
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.174213
+    longitude: 128.09525
+    buildingName: "\uC815\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 8
+    pictureName: "\uCE60\uC554\uC758\uAC04_8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.177315
+    longitude: 128.09512
+    buildingName: "\uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50\uBCD1\uC6D0 \uC7A5\uB840\uC2DD\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 9
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.174587
+    longitude: 128.09445
+    buildingName: "\uAC04\uD638\uB300\uD559 \uBCF5\uD569\uAD50\uC721\uC13C\uD130"
+    buildingDescription: "\uAC04\uD638\uB300\uD559 \uBCF5\uD569\uAD50\uC721\uC13C\uD130\n1\uCE35
+      : \uB300\uAC15\uB2F9 / \uAC15\uB2F9 \uBD80\uC18D\uC2E4 / \uBA40\uD2F0\uBBF8\uB514\uC5B4
+      \uAC15\uC758\uC2E4\n2\uCE35 : \uAC04\uD638\uB300\uD559\uC7A5\uC2E4(\uBCF4\uAC74\uB300\uD559\uC6D0\uC7A5\uC2E4)
+      / \uD589\uC815\uC2E4 / \uAC04\uD638\uD559\uACFC\uC0AC\uBB34\uC2E4 / \uC790\uB8CC\uC2E4\n3\uCE35
+      : \uAD50\uC218\uC5F0\uAD6C\uC2E4 / \uAD50\uC218\uD734\uAC8C\uC2E4\n4\uCE35
+      : WISE\uB8F8 / PBL\uC2E4"
+    buildingNumber: 10
+    pictureName: "\uCE60\uC554\uC758\uAC04_10"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17635
+    longitude: 128.0957
+    buildingName: "\uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50\uBCD1\uC6D0 \uBCF8\uAD00"
+    buildingDescription: '-'
+    buildingNumber: 11
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17583
+    longitude: 128.09483
+    buildingName: "\uC758\uACFC\uB300\uD559 \uC784\uC0C1\uAD50\uC218 \uAD50\uC721\uC5F0\uAD6C\uB3D9"
+    buildingDescription: '-'
+    buildingNumber: 12
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17539
+    longitude: 128.09505
+    buildingName: "\uACBD\uB0A8\uC9C0\uC5ED\uC554\uC13C\uD130"
+    buildingDescription: '-'
+    buildingNumber: 13
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.176376
+    longitude: 128.09677
+    buildingName: "\uC751\uAE09\uC13C\uD130 \uBC0F \uACBD\uB0A8\uAD8C\uC5ED\uC2EC\uB1CC\uD608\uAD00\uC9C8\uD658\uC13C\uD130"
+    buildingDescription: '-'
+    buildingNumber: 14
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17588
+    longitude: 128.09656
+    buildingName: "\uD6C4\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 15
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.177513
+    longitude: 128.09363
+    buildingName: "\uBD81\uBB38"
+    buildingDescription: '-'
+    buildingNumber: 16
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.176476
+    longitude: 128.0945
+    buildingName: "\uACBD\uB0A8\uAD8C\uC5ED\uB958\uB9C8\uD2F0\uC2A4 \uBC0F \uD1F4\uD589\uC131
+      \uAD00\uC808\uC5FC \uACF5\uACF5\uC804\uBB38 \uC9C4\uB8CC\uC13C\uD130"
+    buildingDescription: '-'
+    buildingNumber: 17
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
+  - latitude: 35.17467
+    longitude: 128.09538
+    buildingName: "\uACBD\uC0C1\uAD6D\uB9BD\uB300\uD559\uAD50\uBCD1\uC6D0 \uCCA0\uACE8\uC8FC\uCC28\uC7A5"
+    buildingDescription: '-'
+    buildingNumber: 18
+    pictureName: "\uCE60\uC554\uC758\uAC04_\uAE30\uBCF8"
+    campusName: "\uCE60\uC554 (\uC758, \uAC04\uD638\uB300)"
