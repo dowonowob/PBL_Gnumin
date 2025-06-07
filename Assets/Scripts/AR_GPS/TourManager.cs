@@ -213,7 +213,7 @@ public class TourManager : MonoBehaviour
             canvas.gameObject.SetActive(false);
 
             Pose placePose = hits[0].pose;
-            placePose.position.y = arCamera.position.y - 1.5f;
+            placePose.position.y = arCamera.position.y - 0.5f;
             placeObject.transform.position = placePose.position;
 
             // 수평 방향으로만 카메라 바라보기
@@ -279,7 +279,7 @@ public class TourManager : MonoBehaviour
         if (hits.Count > 0)
         {
             Pose placePose = hits[0].pose;
-            placePose.position.y = arCamera.position.y - 1.5f;
+            placePose.position.y = arCamera.position.y - 0.5f;
             placeObject.transform.position = placePose.position;
 
             // 수평 방향으로만 카메라 바라보기

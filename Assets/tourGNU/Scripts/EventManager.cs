@@ -1,65 +1,69 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Android;
-using UnityEngine.UI;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
-
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class EventManager : MonoBehaviour
-{  
+{
     [SerializeField] private Camera arCamera;
     [SerializeField] private GameObject canvas;
-    
-    
     public GameObject placeObject;
 
-    void Start()
-    {   
-        
-        
+    private TouchInputActions _inputActions;
+
+    private void Awake()
+    {
+        _inputActions = new TouchInputActions();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        if (Input.touchCount > 0)
+        _inputActions.Enable();
+        _inputActions.Touch.TouchPress.performed += OnTouch;
+    }
+
+    private void OnDisable()
+    {
+        _inputActions.Touch.TouchPress.performed -= OnTouch;
+        _inputActions.Disable();
+    }
+
+    private void OnTouch(InputAction.CallbackContext context)
+    {
+        Vector2 screenPos = context.ReadValue<Vector2>();
+
+        // UI 터치 무시
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(Touchscreen.current.primaryTouch.touchId.ReadValue()))
+            return;
+
+        Ray ray = arCamera.ScreenPointToRay(screenPos);
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Touch touch = Input.GetTouch(0);
-            Ray ray;
-            RaycastHit hitobj;
+            Debug.Log("Ray hit: " + hit.collider.name);
 
-            ray = arCamera.ScreenPointToRay(touch.position);
+            if (hit.collider.CompareTag("Heart_Up") || hit.collider.transform.root.CompareTag("Heart_Up"))
+            {
+                Debug.Log("터치 성공!");
 
+                canvas.SetActive(true);
 
-            if (Physics.Raycast(ray, out hitobj))
-            {   
-                if (hitobj.collider.CompareTag("Heart_Up"))
-                {  
-                    
-                    //hitobj.collider.gameobject.setactive(false);
-                    canvas.SetActive(true);
-                    
-                    Vector3 targetPosition = hitobj.collider.transform.position + hitobj.collider.transform.forward * - 0.8f;
-                    targetPosition.y = placeObject.transform.position.y + 1.8f;
-                    canvas.transform.position = targetPosition;
-
-            
-                }
+                Vector3 targetPosition = hit.collider.transform.position + hit.collider.transform.forward * 0.5f;
+                targetPosition.y = placeObject.transform.position.y + 1.0f;
+                canvas.transform.position = targetPosition;
             }
         }
+    }
 
+    private void Update()
+    {
         if (canvas.activeSelf)
         {
             Vector3 directionToCamera = arCamera.transform.position - canvas.transform.position;
-            directionToCamera.y = 0; // 수직 회전 방지 (필요 시)
+            directionToCamera.y = 0;
             canvas.transform.rotation = Quaternion.LookRotation(-directionToCamera);
         }
-        else {
+        else
+        {
             placeObject.SetActive(true);
         }
     }
 }
-
-

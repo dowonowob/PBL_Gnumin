@@ -1,0 +1,45 @@
+{
+    "name": "BackInputAction",
+    "maps": [
+        {
+            "name": "Navigation",
+            "id": "c5372364-1802-4cba-abe6-629d1a9314fe",
+            "actions": [
+                {
+                    "name": "Back",
+                    "type": "Button",
+                    "id": "6d6676f8-1ca4-4fe5-acc3-00224d0cd658",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4f3ec3f0-bb84-4d3e-822b-b3cce7fe1ef9",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e43d54f-2839-42ce-a1e1-ca27a2d5874e",
+                    "path": "<Android>/back",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
