@@ -1,15 +1,19 @@
-using System;
-using UnityEngine;
+//using System;
+//using UnityEngine;
 
-[Serializable]
-public class BuildingData
-{
-    public float latitude;
-    public string buildingDescription;
-    public string buildingName;
-    public string buildingNumber;
-    public string pictureName;
-    public string campusName;
-    public float longitude;
-    public string ginuCharacter;
-}
+//[Serializable]
+//public class BuildingData
+//{
+//    public double latitude;
+//    public double longitude;
+//    public string buildingName;
+
+//    [TextArea(5, 10)]
+//    public string buildingDescription;
+
+//    public string buildingNumber;
+//    public string pictureName;
+//    public string campusName;
+//    public string ginuCharacter;
+//}
+

@@ -33,7 +33,11 @@ public class TourManager : MonoBehaviour
     public GameObject panel; 
     public Image img; 
     public GameObject canvas;
-    public GameObject placeObject;
+    public GameObject placeObject_Default;
+    public GameObject placeObject_Library;
+    public GameObject placeObject_IT;
+
+    public GameObject currentPlaceObject;
 
     IEnumerator Start()
     {
@@ -98,8 +102,8 @@ public class TourManager : MonoBehaviour
 
                 for (int i = 0; i < campus.Sheet1.Count; i++) //
                 {
-                    float buildingLat = campus.Sheet1[i].latitude;
-                    float buildingLong = campus.Sheet1[i].longitude;
+                    double buildingLat = campus.Sheet1[i].latitude;
+                    double buildingLong = campus.Sheet1[i].longitude;
 
                     double myLat = Input.location.lastData.latitude;
                     double myLong = Input.location.lastData.longitude;
@@ -116,10 +120,23 @@ public class TourManager : MonoBehaviour
                 {
                     if (i == minIndex)
                     {
-                        if (min <= 100f)
+                        if (min <= 50f)
                         {
                             if (campus.Sheet1[i].campusName == "가좌")
                             {
+                                if(campus.Sheet1[i].buildingNumber == "2")
+                                {
+                                    currentPlaceObject = placeObject_Library;
+                                }
+                                if (campus.Sheet1[i].buildingNumber == "601")
+                                {
+                                    currentPlaceObject = placeObject_IT;
+                                }
+                                else
+                                {
+                                    currentPlaceObject = placeObject_Default;
+                                }
+
                                 isDistance = true;
                                 campusUI.text = campus.Sheet1[i].campusName + " 캠퍼스";
                                 panel.SetActive(true);
@@ -162,7 +179,7 @@ public class TourManager : MonoBehaviour
                             isDistance = false;
                             isFirst = true;
                             campusUI.text = "";
-                            placeObject.SetActive(false);
+                            currentPlaceObject.SetActive(false);
                             classInfobtn.gameObject.SetActive(false);
                             canvas.SetActive(false);
                         }
@@ -186,7 +203,7 @@ public class TourManager : MonoBehaviour
             isDistance = false;
             isFirst = true;
             campusUI.text = "";
-            placeObject.SetActive(false);
+            currentPlaceObject.SetActive(false);
             canvas.SetActive(false);
         }
     }
@@ -209,12 +226,12 @@ public class TourManager : MonoBehaviour
         if (hits.Count > 0)
         {
             isFirst = false;
-            placeObject.SetActive(true);
+            currentPlaceObject.SetActive(true);
             canvas.gameObject.SetActive(false);
 
             Pose placePose = hits[0].pose;
             placePose.position.y = arCamera.position.y - 0.5f;
-            placeObject.transform.position = placePose.position;
+            currentPlaceObject.transform.position = placePose.position;
 
             // 수평 방향으로만 카메라 바라보기
             Vector3 lookDir = arCamera.position - placePose.position;
@@ -222,7 +239,7 @@ public class TourManager : MonoBehaviour
 
             if (lookDir != Vector3.zero)
             {
-                placeObject.transform.rotation = Quaternion.LookRotation(lookDir);
+                currentPlaceObject.transform.rotation = Quaternion.LookRotation(lookDir);
             }
         }
     }
@@ -280,7 +297,7 @@ public class TourManager : MonoBehaviour
         {
             Pose placePose = hits[0].pose;
             placePose.position.y = arCamera.position.y - 0.5f;
-            placeObject.transform.position = placePose.position;
+            currentPlaceObject.transform.position = placePose.position;
 
             // 수평 방향으로만 카메라 바라보기
             Vector3 lookDir = arCamera.position - placePose.position;
@@ -288,7 +305,7 @@ public class TourManager : MonoBehaviour
 
             if (lookDir != Vector3.zero)
             {
-                placeObject.transform.rotation = Quaternion.LookRotation(lookDir);
+                currentPlaceObject.transform.rotation = Quaternion.LookRotation(lookDir);
             }
             float minDistance = 1.0f; // 최소 거리 (미터)
 

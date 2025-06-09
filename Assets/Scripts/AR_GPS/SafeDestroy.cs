@@ -1,0 +1,23 @@
+using UnityEngine;
+
+namespace Nobi.UiRoundedCorners
+{
+	internal static class SafeDestroy
+	{
+		internal static void Destroy(Object @object)
+		{
+#if UNITY_EDITOR
+			if (Application.isPlaying)
+			{
+				Object.Destroy(@object);
+			}
+			else
+			{
+				Object.DestroyImmediate(@object);
+			}
+#else
+			Object.Destroy(@object);
+#endif
+		}
+	}
+}

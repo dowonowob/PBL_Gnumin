@@ -43,7 +43,7 @@ public class ButtonManager : MonoBehaviour
 
     private void OnButtonPressed()
     {
-        if (tourManager.placeObject != null && tourManager.placeObject.activeSelf)
+        if (tourManager.currentPlaceObject!= null && tourManager.currentPlaceObject.activeSelf)
         {
             tourManager.positionAdjustment();
         }

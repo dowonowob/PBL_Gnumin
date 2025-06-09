@@ -6,13 +6,15 @@ public class EventManager : MonoBehaviour
 {
     [SerializeField] private Camera arCamera;
     [SerializeField] private GameObject canvas;
-    public GameObject placeObject;
+
+    private TourManager tourManager;
 
     private TouchInputActions _inputActions;
 
     private void Awake()
     {
         _inputActions = new TouchInputActions();
+        tourManager = FindObjectOfType<TourManager>();
     }
 
     private void OnEnable()
@@ -46,6 +48,8 @@ public class EventManager : MonoBehaviour
 
                 canvas.SetActive(true);
 
+                GameObject placeObject = tourManager.currentPlaceObject;
+
                 Vector3 targetPosition = hit.collider.transform.position + hit.collider.transform.forward * 0.5f;
                 targetPosition.y = placeObject.transform.position.y + 1.0f;
                 canvas.transform.position = targetPosition;
@@ -63,7 +67,7 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-            placeObject.SetActive(true);
+            tourManager.currentPlaceObject.SetActive(true);
         }
     }
 }
