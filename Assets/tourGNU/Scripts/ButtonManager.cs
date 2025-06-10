@@ -38,7 +38,7 @@ public class ButtonManager : MonoBehaviour
             return;
         }
 
-        btn.gameObject.SetActive(tourManager.min <= 100f);
+        btn.gameObject.SetActive(tourManager.min <= 50f);
     }
 
     private void OnButtonPressed()

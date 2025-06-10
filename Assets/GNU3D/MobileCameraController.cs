@@ -15,15 +15,21 @@ public class MobileCameraController : MonoBehaviour
 
     void LateUpdate()
     {
+        if (target == null)
+        {
+            Debug.LogWarning("MobileCameraController: Target is not assigned.");
+            return;
+        }
+
         HandleTouchInput();
 
-        // 회전 계산
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 direction = rotation * Vector3.back;
 
         transform.position = target.position + direction * distance;
         transform.LookAt(target);
     }
+
 
     void HandleTouchInput()
     {

@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/AR_GPS.unity
     guid: b1f5f0fa855982344a9eef4953e5d884
   - enabled: 1
+    path: Assets/Scenes/SceneChanger.unity
+    guid: eb233a3ea8ac1654093deab14e148c7f
+  - enabled: 1
     path: Assets/Scenes/AR_Gnumin.unity
     guid: d5eae96f2ae069147bc1122271b08422
+  - enabled: 1
+    path: Assets/Scenes/GNU3D.unity
+    guid: 4b290a17c282b5c459a0499eee6ff89e
   m_configObjects:
     Niantic.Lightship.AR.LightshipSettings: {fileID: 11400000, guid: 9b368e862fc1aa749b140ae3a41b6254, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 7736aef75f4a38a4bacffebb1d594ed1, type: 2}

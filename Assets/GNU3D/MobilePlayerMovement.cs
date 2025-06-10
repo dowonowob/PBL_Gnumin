@@ -20,7 +20,6 @@ public class MobilePlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // 🔽 이동 처리
         Vector2 input = joystick.Direction;
         Vector3 camForward = cameraTransform.forward;
         Vector3 camRight = cameraTransform.right;
