@@ -128,7 +128,7 @@ public class TourManager : MonoBehaviour
                                 {
                                     currentPlaceObject = placeObject_Library;
                                 }
-                                if (campus.Sheet1[i].buildingNumber == "601")
+                                else if (campus.Sheet1[i].buildingNumber == "601")
                                 {
                                     currentPlaceObject = placeObject_IT;
                                 }
