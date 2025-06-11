@@ -29,10 +29,11 @@
       "hash": "89c47c34bf9a02957c2c4d94d6ae515b84d84c7b"
     },
     "com.nobi.roundedcorners": {
-      "version": "file:C:/Users/User/Downloads/Unity-UI-Rounded-Corners-3.5.0",
+      "version": "https://github.com/kirevdokimov/Unity-UI-Rounded-Corners.git#v3.4.1",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "06c20cafa885cbb9f14791c269cda6b547e0be30"
     },
     "com.unity.burst": {
       "version": "1.8.19",
